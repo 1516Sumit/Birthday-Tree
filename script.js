@@ -15,11 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
             translateElement.style.display = 'block';
             translateElement.style.top = `${translateButton.offsetTop + translateButton.offsetHeight}px`;
             translateElement.style.left = `${translateButton.offsetLeft}px`;
-            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            if (typeof google !== 'undefined' && google.translate.TranslateElement) {
+                new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            } else {
+                console.error('Google Translate API not loaded');
+            }
         } else {
             translateElement.style.display = 'none';
         }
     });
 
-    AOS.init();
+    AOS.init(); // If using AOS library for animations
 });
