@@ -43,5 +43,18 @@ document.addEventListener('DOMContentLoaded', function() {
         isHindiVisible = !isHindiVisible;
     });
 
+    const navbarHeight = document.querySelector('nav').offsetHeight;
+    const processButton = document.getElementById('process-button');
+    const processSection = document.getElementById('process');
+
+    processButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        const sectionTop = processSection.offsetTop;
+        window.scrollTo({
+            top: sectionTop - navbarHeight,
+            behavior: 'smooth'
+        });
+    });
+
     AOS.init(); // If using AOS library for animations
 });
