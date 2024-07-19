@@ -33,14 +33,17 @@
                         </span>
                     </div>
                 </a>
-                <button data-collapse-toggle="navbar-default" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                <button id="menuButton" data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     aria-controls="navbar-default" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    <svg id="menuIcon" class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 17 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                    <svg id="crossIcon" class="hidden w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 92 92">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M70.7 64.3c1.8 1.8 1.8 4.6 0 6.4-.9.9-2 1.3-3.2 1.3-1.2 0-2.3-.4-3.2-1.3L46 52.4 27.7 70.7c-.9.9-2 1.3-3.2 1.3s-2.3-.4-3.2-1.3c-1.8-1.8-1.8-4.6 0-6.4L39.6 46 21.3 27.7c-1.8-1.8-1.8-4.6 0-6.4 1.8-1.8 4.6-1.8 6.4 0L46 39.6l18.3-18.3c1.8-1.8 4.6-1.8 6.4 0 1.8 1.8 1.8 4.6 0 6.4L52.4 46l18.3 18.3z"></path>
                     </svg>
                 </button>
                 <div class="hidden w-full md:block md:w-auto" id="navbar-default">
@@ -342,33 +345,38 @@
         <div class="md:h-screen bg-[#529801] flex flex-col justify-center items-center py-16 md:py-0">
             <div class="mx-auto w-full max-w-screen-xl">
                 <h1 class="flex flex-col justify-center items-center">
-                    <span data-aos="fade-up" class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-white"
-                        >Plantation of Birthday Trees</span>
+                    <span data-aos="fade-up"
+                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-white">Plantation of
+                        Birthday Trees</span>
                 </h1>
 
                 <article data-translate="en" data-aos="fade-up"
                     class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
-                    As soon as we receive your birthday tree order, we will start the process of planting your birthday tree and upload per month a video of your tree for 3 years so that you can know the growth of your tree.
+                    As soon as we receive your birthday tree order, we will start the process of planting your birthday
+                    tree and upload per month a video of your tree for 3 years so that you can know the growth of your
+                    tree.
                 </article>
 
                 <article data-translate="hi" style="display: none;" data-aos="fade-up"
-                    class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4"
-                    >जैसे ही हमें आपका Birthday Tree का Order प्राप्त होगा, हम आपके Birthday Tree को लगाने की प्रक्रिया शुरू कर देंगे और 3 वर्षों तक प्रति माह आपके वृक्ष का एक वीडियो अपलोड करेंगे, ताकि आप अपने वृक्ष की Growth के बारे में जान सकें।</article>
+                    class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                    जैसे ही हमें आपका Birthday Tree का Order प्राप्त होगा, हम आपके Birthday Tree को लगाने की प्रक्रिया
+                    शुरू कर देंगे और 3 वर्षों तक प्रति माह आपके वृक्ष का एक वीडियो अपलोड करेंगे, ताकि आप अपने वृक्ष की
+                    Growth के बारे में जान सकें।</article>
 
             </div>
 
             <div class="mx-auto w-full max-w-screen-xl">
                 <h1 class="flex flex-col justify-center items-center my-20">
-                    <span data-aos="fade-up" class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-white"
-                        >Variety of Trees</span>
+                    <span data-aos="fade-up"
+                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-white">Variety of
+                        Trees</span>
                 </h1>
 
                 <div class="m-4 md:m-6 flex flex-col md:flex-row justify-center items-center gap-10">
 
                     <div data-aos="fade-up" class="w-11/12 md:w-4/5 bg-white text-black p-8">
                         <h1 class="flex flex-col justify-center items-start">
-                            <span class="text-xl lg:text-2xl font-normal"
-                                >Fruit Trees</span>
+                            <span class="text-xl lg:text-2xl font-normal">Fruit Trees</span>
                         </h1>
                         <p data-translate="en" class="text-[#12141D]">Fruit trees provide food and shelter for birds,
                             insects, and
@@ -381,11 +389,12 @@
 
                     <div data-aos="fade-up" class="w-11/12 md:w-4/5 bg-white text-black p-8">
                         <h1 class="flex flex-col justify-center items-start">
-                            <span class="text-xl lg:text-2xl font-normal"
-                                >Environment Friendly Trees</span>
+                            <span class="text-xl lg:text-2xl font-normal">Environment Friendly Trees</span>
                         </h1>
-                        <p data-translate="en" class="text-[#12141D]">We need more environment friendly trees like peepal, neem.</p>
-                        <p class="text-[#12141D]" data-translate="hi" style="display: none;">हमें पीपल, नीम जैसे पर्यावरण अनुकूल पेड़ों की अधिक आवश्यकता है।</p>
+                        <p data-translate="en" class="text-[#12141D]">We need more environment friendly trees like
+                            peepal, neem.</p>
+                        <p class="text-[#12141D]" data-translate="hi" style="display: none;">हमें पीपल, नीम जैसे
+                            पर्यावरण अनुकूल पेड़ों की अधिक आवश्यकता है।</p>
                         <p class="invisible text-[#12141D]">Environmentally friendly</p>
                     </div>
 
@@ -400,23 +409,26 @@
             <div class="mt-4 mb-16">
                 <h1 class="flex flex-col justify-center items-center">
                     <span data-aos="fade-up"
-                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-black sm:px-16 xl:px-48"
-                        >Location of Birthday Trees</span>
+                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-black sm:px-16 xl:px-48">Location
+                        of Birthday Trees</span>
                 </h1>
             </div>
             <div class="flex flex-wrap lg:flex-nowrap lg:flex-row justify-center items-center gap-10">
                 <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-normal"
-                            >On Degraded Land</span>
-                        <span  data-translate="hi" style="display: none;" class="text-xl lg:text-2xl font-normal mb-2"
-                            >बंजर भूमि पर</span>
+                        <span data-translate="en" class="text-xl lg:text-2xl font-normal">On Degraded Land</span>
+                        <span data-translate="hi" style="display: none;"
+                            class="text-xl lg:text-2xl font-normal mb-2">बंजर भूमि पर</span>
                     </h1>
-                    <p data-translate="en" class="text-[#12141D]">According to the United Nations Convention to Combat Desertification
+                    <p data-translate="en" class="text-[#12141D]">According to the United Nations Convention to Combat
+                        Desertification
                         (UNCCD), over 25% of global land is already degraded, and this rate is rapidly increasing.
                         Scientists believe that tree plantation is the only sustainable way to restore degraded land.
                     </p>
-                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">मरुस्थलीकरण से निपटने के लिए संयुक्त राष्ट्र कन्वेंशन (यूएनसीसीडी) के अनुसार, वैश्विक भूमि का 25% से अधिक हिस्सा पहले ही खराब हो चुका है और यह दर तेजी से बढ़ रही है। वैज्ञानिकों का मानना ​​है कि बंजर भूमि को बहाल करने के लिए वृक्षारोपण ही एकमात्र स्थायी तरीका है।
+                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">मरुस्थलीकरण से निपटने के लिए
+                        संयुक्त राष्ट्र कन्वेंशन (यूएनसीसीडी) के अनुसार, वैश्विक भूमि का 25% से अधिक हिस्सा पहले ही खराब
+                        हो चुका है और यह दर तेजी से बढ़ रही है। वैज्ञानिकों का मानना ​​है कि बंजर भूमि को बहाल करने के
+                        लिए वृक्षारोपण ही एकमात्र स्थायी तरीका है।
                     </p>
 
                     <img src="./img/land.png" class="my-10" />
@@ -424,18 +436,21 @@
 
                 <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-normal" >On
+                        <span data-translate="en" class="text-xl lg:text-2xl font-normal">On
                             Urban Forest for Cities</span>
-                        <span data-translate="hi" style="display: none;" class="text-xl lg:text-2xl font-normal mb-2" >शहरों के लिए</span>
+                        <span data-translate="hi" style="display: none;"
+                            class="text-xl lg:text-2xl font-normal mb-2">शहरों के लिए</span>
 
                     </h1>
-                    <p data-translate="en" class="text-[#12141D]">Cities are realizing the benefits of urban forests. Trees cool cities by
+                    <p data-translate="en" class="text-[#12141D]">Cities are realizing the benefits of urban forests.
+                        Trees cool cities by
                         acting like natural air conditioners, releasing water vapor through their leaves and shading
                         streets and buildings. This helps reduce the urban heat island effect. Because of Heatwave every
                         city is needed Urban Forest.
 
                     </p>
-                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">शहर शहरी वनों के लाभों को महसूस कर रहे हैं। पेड़ों से शहर ठंडे होते हैं
+                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">शहर शहरी वनों के लाभों को महसूस
+                        कर रहे हैं। पेड़ों से शहर ठंडे होते हैं
                         प्राकृतिक एयर कंडीशनर की तरह काम करते हुए, अपनी पत्तियों और छाया के माध्यम से जलवाष्प छोड़ते हुए
                         सड़कें और इमारतें. इससे शहरी ताप द्वीप प्रभाव को कम करने में मदद मिलती है। हीटवेव के कारण हर
                         शहर को शहरी वन की जरूरत है।
@@ -447,14 +462,18 @@
 
                 <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span  data-translate="en" class="text-xl lg:text-2xl font-normal"
-                            >On Farmer’s Land</span>
+                        <span data-translate="en" class="text-xl lg:text-2xl font-normal">On Farmer’s Land</span>
                         <span data-translate="hi" class="text-xl lg:text-2xl font-normal mb-2"
                             style="font-family: 'Microsoft Himalaya'; display: none;">किसानों की जमीन पर</span>
                     </h1>
-                    <p  data-translate="en" class="text-[#12141D]">We will be plant fruit trees on the farmers land. Then we will take care of that tree for 3 years. When that tree starts bearing fruits, the farmer will automatically pluck the fruits and sell. The farmer will keep all the income from fruits with himself.
+                    <p data-translate="en" class="text-[#12141D]">We will be plant fruit trees on the farmers land. Then
+                        we will take care of that tree for 3 years. When that tree starts bearing fruits, the farmer
+                        will automatically pluck the fruits and sell. The farmer will keep all the income from fruits
+                        with himself.
                     </p>
-                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">हम किसानों की ज़मीन पर फलों के पेड़ लगाएंगे। फिर हम उस पेड़ की 3 साल तक देखभाल करेंगे। जब वह पेड़ फल देने लगेगा, तो किसान अपने आप ही फल तोड़कर बेच देगा। फलों से होने वाली सारी आय किसान अपने पास ही रखेगा।
+                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">हम किसानों की ज़मीन पर फलों के
+                        पेड़ लगाएंगे। फिर हम उस पेड़ की 3 साल तक देखभाल करेंगे। जब वह पेड़ फल देने लगेगा, तो किसान अपने
+                        आप ही फल तोड़कर बेच देगा। फलों से होने वाली सारी आय किसान अपने पास ही रखेगा।
                     </p>
 
                     <img src="./img/trees.png" class="my-10" />
@@ -469,8 +488,8 @@
             <div class="mt-4 mb-16">
                 <h1 class="flex flex-col justify-center items-center">
                     <span data-aos="fade-up"
-                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-black sm:px-16 xl:px-48"
-                        >Track Your Tree's Growth</span>
+                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-black sm:px-16 xl:px-48">Track
+                        Your Tree's Growth</span>
                 </h1>
             </div>
 
@@ -478,24 +497,33 @@
 
                 <div data-aos="fade-up" class="w-full md:w-4/5 bg-white text-black p-8 border rounded-3xl">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Maintenance of your birthday
+                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Maintenance
+                            of your birthday
                             Tree</span>
-                        <span data-translate="hi" style="display: none;" class="text-xl lg:text-2xl font-semibold text-[#529801]">जन्मदिन के पेड़ का रखरखाव</span>
+                        <span data-translate="hi" style="display: none;"
+                            class="text-xl lg:text-2xl font-semibold text-[#529801]">जन्मदिन के पेड़ का रखरखाव</span>
                     </h1>
-                    <p data-translate="en" class="text-[#12141D]">Every tree wants 03 year maintenance so your tree will receives expert care for at least 3 years after planting.
+                    <p data-translate="en" class="text-[#12141D]">Every tree wants 03 year maintenance so your tree will
+                        receives expert care for at least 3 years after planting.
                     </p>
-                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">प्रत्येक पेड़ को 3 वर्ष तक रखरखाव की आवश्यकता होती है, इसलिए आपके पेड़ को Plantation के बाद कम से कम 3 वर्षों तक विशेषज्ञ देखभाल प्राप्त होगी।
+                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">प्रत्येक पेड़ को 3 वर्ष तक
+                        रखरखाव की आवश्यकता होती है, इसलिए आपके पेड़ को Plantation के बाद कम से कम 3 वर्षों तक विशेषज्ञ
+                        देखभाल प्राप्त होगी।
                     </p>
                 </div>
 
                 <div data-aos="fade-up" class="w-full md:w-4/5 bg-white text-black p-8 border rounded-3xl">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span  data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Separate Tree Account</span>
-                        <span data-translate="hi" style="display: none;" class="text-xl lg:text-2xl font-semibold text-[#529801]">अलग वृक्ष खाता</span>
+                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Separate Tree
+                            Account</span>
+                        <span data-translate="hi" style="display: none;"
+                            class="text-xl lg:text-2xl font-semibold text-[#529801]">अलग वृक्ष खाता</span>
                     </h1>
-                    <p  data-translate="en" class="text-[#12141D]">We will create a separate Birthday Tree Account of your tree to upload monthly video.
+                    <p data-translate="en" class="text-[#12141D]">We will create a separate Birthday Tree Account of
+                        your tree to upload monthly video.
                     </p>
-                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">हम आपके पेड़ का एक अलग Birthday Tree Account बनाएंगे, ताकि उस पर मासिक वीडियो अपलोड किया जा सके।
+                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">हम आपके पेड़ का एक अलग Birthday
+                        Tree Account बनाएंगे, ताकि उस पर मासिक वीडियो अपलोड किया जा सके।
                     </p>
                 </div>
 
@@ -505,25 +533,37 @@
 
                 <div data-aos="fade-up" class="w-full md:w-4/5 bg-white text-black p-8 border rounded-3xl">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Video updates up to 03
+                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Video updates
+                            up to 03
                             years</span>
-                            <span data-translate="hi" style="display: none;" class="text-xl lg:text-2xl font-semibold text-[#529801]">
-                                वीडियो अपडेट 3 वर्ष तक</span>
+                        <span data-translate="hi" style="display: none;"
+                            class="text-xl lg:text-2xl font-semibold text-[#529801]">
+                            वीडियो अपडेट 3 वर्ष तक</span>
                     </h1>
-                    <p  data-translate="en" class="text-[#12141D]">To confirm whether the sapling you planted has grown into a big tree or not, a video of your tree will be uploaded every month for 3 years and you will be informed about the uploading so that you can be satisfied.
+                    <p data-translate="en" class="text-[#12141D]">To confirm whether the sapling you planted has grown
+                        into a big tree or not, a video of your tree will be uploaded every month for 3 years and you
+                        will be informed about the uploading so that you can be satisfied.
                     </p>
-                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">आपका लगवाया हुआ पौधा बड़ा पेड़ बन गया है या नहीं इस बात की पुष्टि के लिए आपके पेड़ की एक वीडियो हर महीने 3 साल तक अपलोड की जायेगी व अपलोड होने की सूचना आपको दी जाएगी ताकि आप संतुष्ट हो सके |
+                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">आपका लगवाया हुआ पौधा बड़ा पेड़ बन
+                        गया है या नहीं इस बात की पुष्टि के लिए आपके पेड़ की एक वीडियो हर महीने 3 साल तक अपलोड की जायेगी व
+                        अपलोड होने की सूचना आपको दी जाएगी ताकि आप संतुष्ट हो सके |
                     </p>
                 </div>
 
                 <div data-aos="fade-up" class="w-full md:w-4/5 bg-white text-black p-8 border rounded-3xl">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Replacement Guarantee</span>
-                        <span data-translate="hi" style="display: none;" class="text-xl lg:text-2xl font-semibold text-[#529801]">प्रतिस्थापन गारंटी</span>
+                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Replacement
+                            Guarantee</span>
+                        <span data-translate="hi" style="display: none;"
+                            class="text-xl lg:text-2xl font-semibold text-[#529801]">प्रतिस्थापन गारंटी</span>
                     </h1>
-                    <p  data-translate="en" class="text-[#12141D]">If your birthday tree doesn't survive, we will plant a new tree and take care of it for the next 3 years and upload video to your Birthday Tree Account.
+                    <p data-translate="en" class="text-[#12141D]">If your birthday tree doesn't survive, we will plant a
+                        new tree and take care of it for the next 3 years and upload video to your Birthday Tree
+                        Account.
                     </p>
-                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">यदि आपका जन्मदिन का पेड़ Survive नहीं कर पाता है, तो हम एक नया पेड़ लगाएंगे और अगले 3 वर्षों तक उसकी देखभाल करेंगे और आपके Birthday Tree Account पर वीडियो अपलोड करेंगे।
+                    <p data-translate="hi" style="display: none;" class="text-[#12141D]">यदि आपका जन्मदिन का पेड़
+                        Survive नहीं कर पाता है, तो हम एक नया पेड़ लगाएंगे और अगले 3 वर्षों तक उसकी देखभाल करेंगे और
+                        आपके Birthday Tree Account पर वीडियो अपलोड करेंगे।
                     </p>
                 </div>
 
@@ -543,8 +583,8 @@
             <div class="mt-4 mb-16">
                 <h1 class="flex flex-col justify-center items-center">
                     <span data-aos="fade-up"
-                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-black sm:px-16 xl:px-48"
-                        >Our Process</span>
+                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-black sm:px-16 xl:px-48">Our
+                        Process</span>
                 </h1>
             </div>
 
@@ -884,42 +924,49 @@
             <div class="mx-auto w-full max-w-screen-xl">
                 <h1 class="flex flex-col justify-center items-center m-20">
                     <span data-aos="fade-up"
-                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-white sm:px-16 xl:px-48"
-                        >Transparency Promise</span>
+                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-white sm:px-16 xl:px-48">Transparency
+                        Promise</span>
                 </h1>
 
                 <div class="m-4 md:m-8 flex flex-col md:flex-row justify-center items-center gap-10">
                     <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black p-8">
                         <h1 class="flex flex-col justify-center items-start">
-                            <span class="text-lg lg:text-xl font-normal"
-                                >Worried about duplicate video ?</span>
+                            <span class="text-lg lg:text-xl font-normal">Worried about duplicate video ?</span>
                         </h1>
-                        <p  data-translate="en" class="text-sm text-[#12141D]">Many clients asked me whether I am sending the video of the same tree to different clients. You don't have to worry about this. All our Birthday Tree IDs have been made serial wise so that easy verification can be done.
+                        <p data-translate="en" class="text-sm text-[#12141D]">Many clients asked me whether I am sending
+                            the video of the same tree to different clients. You don't have to worry about this. All our
+                            Birthday Tree IDs have been made serial wise so that easy verification can be done.
                         </p>
-                        <p  data-translate="hi" style="display: none;" class="text-sm text-[#12141D]">कई Clients ने मुझसे पूछा की एक ही पेड़ की वीडियो को अलग-अलग Clients को तो नहीं भेज रहे हो | इसके लिए तो आपको चिंता करने की ज़रूरत नहीं है। Easy verification हो सके इसलिए हमारी सभी Birthday Tree ID को Serial Wise बनाया गया है |
+                        <p data-translate="hi" style="display: none;" class="text-sm text-[#12141D]">कई Clients ने मुझसे
+                            पूछा की एक ही पेड़ की वीडियो को अलग-अलग Clients को तो नहीं भेज रहे हो | इसके लिए तो आपको
+                            चिंता करने की ज़रूरत नहीं है। Easy verification हो सके इसलिए हमारी सभी Birthday Tree ID को
+                            Serial Wise बनाया गया है |
                         </p>
                     </div>
 
                     <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black p-8">
                         <h1 class="flex flex-col justify-center items-start">
-                            <span class="text-lg lg:text-xl font-normal"
-                                >Every Account open for all</span>
+                            <span class="text-lg lg:text-xl font-normal">Every Account open for all</span>
                         </h1>
-                        <p data-translate="en" class="text-sm text-[#12141D]">All Birthday Tree Accounts are kept open for everyone so that you can check the videos of all Birthday Tree Accounts.
+                        <p data-translate="en" class="text-sm text-[#12141D]">All Birthday Tree Accounts are kept open
+                            for everyone so that you can check the videos of all Birthday Tree Accounts.
                         </p>
-                        <p  data-translate="hi" style="display: none;" class="text-sm text-[#12141D]">सभी Birthday Tree Accounts को सभी के लिए Open रखा गया है ताकि आप सभी Birthday Tree Account की Videos को Check कर सके |
+                        <p data-translate="hi" style="display: none;" class="text-sm text-[#12141D]">सभी Birthday Tree
+                            Accounts को सभी के लिए Open रखा गया है ताकि आप सभी Birthday Tree Account की Videos को Check
+                            कर सके |
                         </p>
                     </div>
 
                     <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black p-8">
                         <h1 class="flex flex-col justify-center items-start">
-                            <span class="text-lg lg:text-xl font-normal"
-                                >Report & Trust</span>
+                            <span class="text-lg lg:text-xl font-normal">Report & Trust</span>
                         </h1>
-                        <p  data-translate="en" class="text-sm text-[#12141D]">Found a duplicate video? Report it! We take these concerns seriously
+                        <p data-translate="en" class="text-sm text-[#12141D]">Found a duplicate video? Report it! We
+                            take these concerns seriously
                             to ensure each tree is linked to just one account.
                         </p>
-                        <p  data-translate="hi" style="display: none;" class="text-sm text-[#12141D]">डुप्लीकेट वीडियो मिला? इसकी रिपोर्ट करें! हम इन चिंताओं को गंभीरता से लेते हैं
+                        <p data-translate="hi" style="display: none;" class="text-sm text-[#12141D]">डुप्लीकेट वीडियो
+                            मिला? इसकी रिपोर्ट करें! हम इन चिंताओं को गंभीरता से लेते हैं
                             यह सुनिश्चित करने के लिए कि प्रत्येक पेड़ केवल एक खाते से जुड़ा हुआ है।
                         </p>
                     </div>
@@ -952,8 +999,8 @@
             <div class="mt-4 mb-16">
                 <h1 class="flex flex-col justify-center items-center">
                     <span data-aos="fade-up"
-                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-black sm:px-16 xl:px-48"
-                        >Benefits of Birthday Tree </span>
+                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-black sm:px-16 xl:px-48">Benefits
+                        of Birthday Tree </span>
                 </h1>
             </div>
 
