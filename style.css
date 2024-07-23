@@ -9,6 +9,23 @@ body{
     overflow-x: hidden;
 }
 
+#translate_options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.selected-language {
+  background-color: #e2e8f0; /* Tailwind's gray-200 */
+  font-weight: bold;
+}
+
 section.bg-cover {
   background-position: center;
 }

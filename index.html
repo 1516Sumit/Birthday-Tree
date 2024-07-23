@@ -42,8 +42,11 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
-                    <svg id="crossIcon" class="hidden w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 92 92">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M70.7 64.3c1.8 1.8 1.8 4.6 0 6.4-.9.9-2 1.3-3.2 1.3-1.2 0-2.3-.4-3.2-1.3L46 52.4 27.7 70.7c-.9.9-2 1.3-3.2 1.3s-2.3-.4-3.2-1.3c-1.8-1.8-1.8-4.6 0-6.4L39.6 46 21.3 27.7c-1.8-1.8-1.8-4.6 0-6.4 1.8-1.8 4.6-1.8 6.4 0L46 39.6l18.3-18.3c1.8-1.8 4.6-1.8 6.4 0 1.8 1.8 1.8 4.6 0 6.4L52.4 46l18.3 18.3z"></path>
+                    <svg id="crossIcon" class="hidden w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="black"
+                        viewBox="0 0 92 92">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M70.7 64.3c1.8 1.8 1.8 4.6 0 6.4-.9.9-2 1.3-3.2 1.3-1.2 0-2.3-.4-3.2-1.3L46 52.4 27.7 70.7c-.9.9-2 1.3-3.2 1.3s-2.3-.4-3.2-1.3c-1.8-1.8-1.8-4.6 0-6.4L39.6 46 21.3 27.7c-1.8-1.8-1.8-4.6 0-6.4 1.8-1.8 4.6-1.8 6.4 0L46 39.6l18.3-18.3c1.8-1.8 4.6-1.8 6.4 0 1.8 1.8 1.8 4.6 0 6.4L52.4 46l18.3 18.3z">
+                        </path>
                     </svg>
                 </button>
                 <div class="hidden w-full md:block md:w-auto" id="navbar-default">
@@ -69,20 +72,53 @@
                                 class="block py-2 px-3 text-[#12141D99] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">All
                                 Trees</a>
                         </li>
-                        <li class="flex justify-start md:justify-center items-center md:gap-4">
-                            <!-- <a href="#" id="google_element"
-                                class="block py-2 px-3 text-[#12141D99] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"><span class="flex flex-row">Translate &nbsp;<img src="./img/translate.png" class="w-5" /></span></a>
-                                <div id="google_translate_element" class="hidden"></div> -->
-
+                        <li class="flex justify-start md:justify-center items-center md:gap-4 relative">
                             <button id="translate_button"
-                                class="block py-2 px-3 text-[#12141D99] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"><span
-                                    class="flex flex-row">Translate
-                                    &nbsp;<img src="./img/translate.png" class="w-5" /></span></button>
+                                class="block py-2 px-3 text-[#12141D99] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
+                                <span class="flex flex-row">Translate
+                                    &nbsp;<img src="./img/translate.png" class="w-5" />
+                                </span>
+                            </button>
+                            <ul id="translate_options"
+                                class="absolute h-72 overflow-scroll overflow-x-hidden hidden mt-1 w-48 bg-white rounded-md shadow-lg z-10">
+                                <li><a href="#" data-lang="en"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100 selected-language">English</a>
+                                </li>
+                                <li><a href="#" data-lang="hi"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Hindi</a></li>
+                                <li><a href="#" data-lang="pa"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Punjabi</a></li>
+                                <li><a href="#" data-lang="gu"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Gujarati</a>
+                                </li>
+                                <li><a href="#" data-lang="mr"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Marathi</a></li>
+                                <li><a href="#" data-lang="kn"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Kannada</a></li>
+                                <li><a href="#" data-lang="ml"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Malayalam</a>
+                                </li>
+                                <li><a href="#" data-lang="ta"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Tamil</a></li>
+                                <li><a href="#" data-lang="te"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Telugu</a></li>
+                                <li><a href="#" data-lang="or"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Odia/Oriya</a>
+                                </li>
+                                <li><a href="#" data-lang="be"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Bengali</a></li>
+                                <li><a href="#" data-lang="as"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Assamese</a>
+                                </li>
+                                <li><a href="#" data-lang="sd"
+                                        class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Sindhi</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        
 
         <!--................. Header ..................-->
         <section class="bg-[url('./img/hero.png')] bg-cover bg-no-repeat h-screen">
@@ -116,34 +152,229 @@
 
         <section data-aos="fade-up"
             class="mx-auto w-full max-w-screen-xl flex flex-col justify-center items-center gap-10 text-center px-10 text-[#3F3F46] text-lg md:text-2xl h-auto py-20">
+
+            <!-- .................first line................... -->
+
             <article data-translate="en" data-aos="fade-up">Planting a tree on your birthday is a fantastic way to
-                celebrate your birthday
-                day and
-                give back to the nature. Planting trees on birthdays is a beautiful tradition that can be developed as a
-                culture.</article>
+                celebrate your birthday day and give back to the nature. Planting trees on birthdays is a beautiful
+                tradition that can be developed as a culture.</article>
+
             <article data-translate="hi" data-aos="fade-up" style="display: none;">अपने जन्मदिन पर एक पेड़ लगाना अपने
                 जन्मदिन का जश्न मनाने और प्रकृति को वापस लौटाने का एक शानदार तरीका है। जन्मदिन पर पौधे लगाना एक खूबसूरत
                 परंपरा है जिसे एक संस्कृति के रूप में विकसित किया जा सकता है।</article>
 
+            <article data-translate="pa" data-aos="fade-up" style="display: none;">ਆਪਣੇ ਜਨਮਦਿਨ 'ਤੇ ਰੁੱਖ ਲਗਾਉਣਾ ਤੁਹਾਡੇ
+                ਜਨਮਦਿਨ ਦੇ ਦਿਨ ਨੂੰ ਮਨਾਉਣ ਅਤੇ ਕੁਦਰਤ ਨੂੰ ਵਾਪਸ ਦੇਣ ਦਾ ਇੱਕ ਸ਼ਾਨਦਾਰ ਤਰੀਕਾ ਹੈ। ਜਨਮਦਿਨ 'ਤੇ ਰੁੱਖ ਲਗਾਉਣਾ ਇੱਕ ਸੁੰਦਰ
+                ਪਰੰਪਰਾ ਹੈ ਜਿਸ ਨੂੰ ਇੱਕ ਸੱਭਿਆਚਾਰ ਵਜੋਂ ਵਿਕਸਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।</article>
+
+            <article data-translate="gu" data-aos="fade-up" style="display: none;">તમારા જન્મદિવસ પર વૃક્ષ રોપવું એ
+                તમારા જન્મદિવસની ઉજવણી કરવા અને પ્રકૃતિને પાછું આપવાનો એક અદ્ભુત માર્ગ છે. જન્મદિવસ પર વૃક્ષો વાવવા એ એક
+                સુંદર પરંપરા છે જેને સંસ્કૃતિ તરીકે વિકસાવી શકાય છે.
+            </article>
+
+            <article data-translate="mr" data-aos="fade-up" style="display: none;">तुमच्या वाढदिवसाला झाड लावणे हा तुमचा
+                वाढदिवस साजरा करण्याचा आणि निसर्गाला परत देण्याचा एक विलक्षण मार्ग आहे. वाढदिवसानिमित्त झाडे लावणे ही एक
+                सुंदर परंपरा आहे जी संस्कृती म्हणून विकसित केली जाऊ शकते.</article>
+
+            <article data-translate="kn" data-aos="fade-up" style="display: none;">ನಿಮ್ಮ ಜನ್ಮದಿನದಂದು ಮರವನ್ನು ನೆಡುವುದು
+                ನಿಮ್ಮ ಜನ್ಮದಿನವನ್ನು ಆಚರಿಸಲು ಮತ್ತು ಪ್ರಕೃತಿಗೆ ಮರಳಲು ಅದ್ಭುತವಾದ ಮಾರ್ಗವಾಗಿದೆ. ಹುಟ್ಟುಹಬ್ಬದಂದು ಮರಗಳನ್ನು ನೆಡುವುದು
+                ಒಂದು ಸುಂದರ ಸಂಪ್ರದಾಯವಾಗಿದ್ದು ಅದನ್ನು ಸಂಸ್ಕೃತಿಯಾಗಿ ಬೆಳೆಸಬಹುದು.</article>
+
+            <article data-translate="ml" data-aos="fade-up" style="display: none;">നിങ്ങളുടെ ജന്മദിനത്തിൽ ഒരു മരം
+                നടുന്നത് നിങ്ങളുടെ ജന്മദിനം ആഘോഷിക്കാനും പ്രകൃതിക്ക് തിരികെ നൽകാനുമുള്ള ഒരു മികച്ച മാർഗമാണ്.
+                ജന്മദിനങ്ങളിൽ മരങ്ങൾ നട്ടുപിടിപ്പിക്കുന്നത് ഒരു സംസ്കാരമായി വളർത്തിയെടുക്കാവുന്ന മനോഹരമായ ഒരു
+                പാരമ്പര്യമാണ്.
+            </article>
+
+            <article data-translate="ta" data-aos="fade-up" style="display: none;">உங்கள் பிறந்தநாளில் ஒரு மரத்தை நடுவது
+                உங்கள் பிறந்தநாளைக் கொண்டாடுவதற்கும் இயற்கைக்கு திரும்பக் கொடுப்பதற்கும் ஒரு அருமையான வழியாகும்.
+                பிறந்தநாளில் மரங்களை நடுவது ஒரு அழகான பாரம்பரியம், அதை ஒரு கலாச்சாரமாக வளர்க்கலாம்.
+            </article>
+
+            <article data-translate="te" data-aos="fade-up" style="display: none;">మీ పుట్టినరోజున ఒక చెట్టును నాటడం మీ
+                పుట్టినరోజును జరుపుకోవడానికి మరియు ప్రకృతికి తిరిగి ఇవ్వడానికి ఒక అద్భుతమైన మార్గం. పుట్టినరోజున చెట్లు
+                నాటడం ఒక అందమైన సంప్రదాయం, ఇది సంస్కృతిగా అభివృద్ధి చెందుతుంది.
+            </article>
+
+            <article data-translate="or" data-aos="fade-up" style="display: none;">ଆପଣଙ୍କ ଜନ୍ମଦିନରେ ଗଛ ଲଗାଇବା ହେଉଛି
+                ଆପଣଙ୍କର ଜନ୍ମଦିନ ପାଳନ କରିବା ଏବଂ ପ୍ରକୃତିକୁ ଫେରାଇବା ପାଇଁ ଏକ ଚମତ୍କାର ଉପାୟ | ଜନ୍ମଦିନରେ ବୃକ୍ଷ ରୋପଣ ଏକ ସୁନ୍ଦର
+                ପରମ୍ପରା ଯାହା ଏକ ସଂସ୍କୃତି ଭାବରେ ବିକଶିତ ହୋଇପାରିବ |
+            </article>
+
+            <article data-translate="be" data-aos="fade-up" style="display: none;">আপনার জন্মদিনে একটি গাছ লাগানো আপনার
+                জন্মদিনের দিনটি উদযাপন করার এবং প্রকৃতিকে ফিরিয়ে দেওয়ার একটি দুর্দান্ত উপায়। জন্মদিনে গাছ লাগানো একটি
+                সুন্দর ঐতিহ্য যা একটি সংস্কৃতি হিসেবে গড়ে তোলা যেতে পারে।
+            </article>
+
+            <article data-translate="as" data-aos="fade-up" style="display: none;">জন্মদিনত গছ ৰোপণ কৰাটো আপোনাৰ
+                জন্মদিনৰ দিনটো উদযাপন কৰাৰ আৰু প্ৰকৃতিক ঘূৰাই দিয়াৰ এক কল্পনাতীত উপায়। জন্মদিনত গছপুলি ৰোপণ কৰাটো এটা
+                সুন্দৰ পৰম্পৰা যিটোক সংস্কৃতি হিচাপে গঢ়ি তুলিব পাৰি।
+            </article>
+
+            <article data-translate="sd" data-aos="fade-up" style="display: none;">توهان جي جنم ڏينهن تي هڪ وڻ پوکڻ هڪ
+                بهترين طريقو آهي توهان جي سالگره جو ڏينهن ملهائڻ ۽ فطرت کي واپس ڏيڻ جو. جنم ڏينهن تي وڻ پوکڻ هڪ خوبصورت
+                روايت آهي جنهن کي ثقافت طور ترقي ڪري سگهجي ٿي.
+            </article>
+
+
+
+            <!-- .................second line................... -->
+
             <article data-translate="en" data-aos="fade-up" class="text-[#529801] font-bold">Daily 20000000 people
-                celebrate their birthday,
-                If we create
-                birthday tree plantation as a culture then we can plant millions of trees daily.</article>
+                celebrate their birthday, If we create birthday tree plantation as a culture then we can plant millions
+                of trees daily.</article>
+
             <article data-translate="hi" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
                 प्रतिदिन 20000000 लोग अपना जन्मदिन मनाते हैं, यदि हम जन्मदिन पर वृक्षारोपण को एक संस्कृति बनाएं तो हम
                 प्रतिदिन लाखों पेड़ लगा सकते हैं।</article>
 
+            <article data-translate="pa" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
+                ਰੋਜ਼ਾਨਾ 20000000 ਲੋਕ ਆਪਣਾ ਜਨਮ ਦਿਨ ਮਨਾਉਂਦੇ ਹਨ, ਜੇਕਰ ਅਸੀਂ ਜਨਮ ਦਿਨ ਰੁੱਖ ਲਗਾਉਣ ਨੂੰ ਸੱਭਿਆਚਾਰ ਦੇ ਰੂਪ ਵਿੱਚ
+                ਬਣਾਈਏ ਤਾਂ ਅਸੀਂ ਰੋਜ਼ਾਨਾ ਲੱਖਾਂ ਰੁੱਖ ਲਗਾ ਸਕਦੇ ਹਾਂ।
+            </article>
+
+            <article data-translate="gu" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
+                દરરોજ 20000000 લોકો તેમનો જન્મદિવસ ઉજવે છે, જો આપણે જન્મદિવસના વૃક્ષારોપણને સંસ્કૃતિ તરીકે બનાવીએ તો
+                આપણે દરરોજ લાખો વૃક્ષો વાવી શકીશું.
+            </article>
+
+            <article data-translate="mr" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
+                दररोज 20000000 लोक आपला वाढदिवस साजरा करतात, वाढदिवस वृक्षारोपण ही संस्कृती म्हणून आपण घडवली तर आपण रोज
+                लाखो झाडे लावू शकतो.
+            </article>
+
+            <article data-translate="kn" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
+                ಪ್ರತಿದಿನ 20000000 ಜನರು ತಮ್ಮ ಜನ್ಮದಿನವನ್ನು ಆಚರಿಸುತ್ತಾರೆ, ನಾವು ಹುಟ್ಟುಹಬ್ಬದ ಮರ ನೆಡುವಿಕೆಯನ್ನು ಸಂಸ್ಕೃತಿಯಾಗಿ
+                ರಚಿಸಿದರೆ ನಾವು ಪ್ರತಿದಿನ ಲಕ್ಷಾಂತರ ಮರಗಳನ್ನು ನೆಡಬಹುದು.
+            </article>
+
+            <article data-translate="ml" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
+                ദിനംപ്രതി 20000000 ആളുകൾ അവരുടെ ജന്മദിനം ആഘോഷിക്കുന്നു, ജന്മദിന വൃക്ഷത്തൈ നടുന്നത് ഒരു സംസ്കാരമായി
+                ഉണ്ടാക്കിയാൽ നമുക്ക് ദശലക്ഷക്കണക്കിന് മരങ്ങൾ ദിവസവും നടാം.
+            </article>
+
+            <article data-translate="ta" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
+                தினசரி 20000000 பேர் தங்கள் பிறந்தநாளைக் கொண்டாடுகிறார்கள், பிறந்தநாள் மரம் வளர்ப்பை ஒரு கலாச்சாரமாக
+                உருவாக்கினால், தினமும் மில்லியன் கணக்கான மரங்களை நடலாம்.
+            </article>
+
+            <article data-translate="te" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
+                ప్రతిరోజూ 20000000 మంది ప్రజలు తమ పుట్టినరోజును జరుపుకుంటారు, పుట్టినరోజు చెట్ల పెంపకాన్ని మనం ఒక
+                సంస్కృతిగా సృష్టిస్తే, మనం ప్రతిరోజూ మిలియన్ల చెట్లను నాటవచ్చు.
+            </article>
+
+            <article data-translate="or" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">ଦ
+                Daily ନିକ 20000000 ଲୋକ ସେମାନଙ୍କର ଜନ୍ମଦିନ ପାଳନ କରନ୍ତି, ଯଦି ଆମେ ଏକ ସଂସ୍କୃତି ଭାବରେ ଜନ୍ମଦିନ ବୃକ୍ଷରୋପଣ ସୃଷ୍ଟି
+                କରୁ ତେବେ ଆମେ ପ୍ରତିଦିନ ଲକ୍ଷ ଲକ୍ଷ ଗଛ ଲଗାଇ ପାରିବା |
+            </article>
+
+            <article data-translate="be" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
+                দৈনিক 20000000 মানুষ তাদের জন্মদিন পালন করে, জন্মদিনে বৃক্ষরোপণকে সংস্কৃতি হিসেবে গড়ে তুললে আমরা
+                প্রতিদিন লক্ষ লক্ষ গাছ লাগাতে পারব।
+            </article>
+
+            <article data-translate="as" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
+                দৈনিক 20000000 মানুহে জন্মদিন পালন কৰে, যদি আমি জন্মদিনৰ বৃক্ষৰোপণ এটা সংস্কৃতি হিচাপে সৃষ্টি কৰো তেন্তে
+                আমি দৈনিক লাখ লাখ গছ ৰোপণ কৰিব পাৰো।
+            </article>
+
+            <article data-translate="sd" data-aos="fade-up" class="text-[#529801] font-bold" style="display: none;">
+                روزانو 20000000 ماڻهو پنهنجو جنم ڏينهن ملهائين ٿا، جيڪڏهن اسان جنم ڏينهن تي وڻ پوکڻ کي ثقافت بڻائي سگهون
+                ٿا ته روزانو لکين وڻ پوکي سگهون ٿا.</article>
+
+            <!-- .................third line................... -->
+
             <article data-translate="en" data-aos="fade-up">Many people want to do a Tree Plantation on their Birthday
-                but due to some
-                reasons for those who
-                are not able to do a Plantation. So, we have started a Startup through which any person who wants to do
-                a Birthday Tree Plantation on their Birthday can plant it from us.</article>
+                but due to some reasons for those who are not able to do a Plantation. So, we have started a Startup
+                through which any person who wants to do a Birthday Tree Plantation on their Birthday can plant it from
+                us.</article>
+
             <article data-translate="hi" data-aos="fade-up" style="display: none;">बहुत से लोग अपने जन्मदिन पर
                 वृक्षारोपण करना चाहते हैं लेकिन कुछ कारणों से जो लोग वृक्षारोपण नहीं कर पाते हैं। इसलिए, हमने एक
                 स्टार्टअप शुरू किया है जिसके माध्यम से कोई भी व्यक्ति जो अपने जन्मदिन पर वृक्षारोपण करना चाहता है वह
                 हमसे वृक्षारोपण कर सकता है।</article>
-        </section>
 
+
+            <article data-translate="pa" data-aos="fade-up" style="display: none;">ਬਹੁਤ ਸਾਰੇ ਲੋਕ ਆਪਣੇ ਜਨਮ ਦਿਨ 'ਤੇ ਰੁੱਖ
+                ਲਗਾਉਣਾ ਚਾਹੁੰਦੇ ਹਨ ਪਰ ਕੁਝ ਕਾਰਨਾਂ ਕਰਕੇ ਜੋ ਪੌਦੇ ਨਹੀਂ ਲਗਾ ਪਾ ਰਹੇ ਹਨ। ਇਸ ਲਈ, ਅਸੀਂ ਇੱਕ ਸਟਾਰਟਅੱਪ ਸ਼ੁਰੂ ਕੀਤਾ ਹੈ,
+                ਜਿਸ
+                ਰਾਹੀਂ ਕੋਈ ਵੀ ਵਿਅਕਤੀ ਜੋ ਆਪਣੇ ਜਨਮ ਦਿਨ 'ਤੇ ਜਨਮਦਿਨ ਦਾ ਰੁੱਖ ਲਗਾਉਣਾ ਚਾਹੁੰਦਾ ਹੈ, ਉਹ ਸਾਡੇ ਤੋਂ ਪੌਦੇ ਲਗਾ ਸਕਦਾ ਹੈ।
+            </article>
+
+            <article data-translate="gu" data-aos="fade-up" style="display: none;">ઘણા લોકો તેમના જન્મદિવસ પર વૃક્ષારોપણ
+                કરવા માંગે છે પરંતુ કેટલાક કારણોસર જેઓ વૃક્ષારોપણ કરી શકતા નથી. તેથી, અમે એક સ્ટાર્ટઅપ શરૂ કર્યું છે
+                જેના
+                દ્વારા કોઈપણ વ્યક્તિ જે તેમના જન્મદિવસ પર બર્થડે ટ્રી પ્લાન્ટેશન કરવા માંગે છે તે અમારી પાસેથી
+                વૃક્ષારોપણ
+                કરી શકે છે.
+            </article>
+
+            <article data-translate="mr" data-aos="fade-up" style="display: none;">अनेकांना त्यांच्या वाढदिवशी
+                वृक्षारोपण
+                करायचे असते परंतु काही कारणांमुळे ज्यांना वृक्षारोपण करता येत नाही. म्हणून, आम्ही एक स्टार्टअप सुरू केले
+                आहे
+                ज्याद्वारे कोणत्याही व्यक्तीला त्यांच्या वाढदिवसाच्या दिवशी वृक्षारोपण करायचे असेल तर ते आमच्याकडून
+                वृक्षारोपण करू शकेल.
+            </article>
+
+            <article data-translate="kn" data-aos="fade-up" style="display: none;">ಅನೇಕ ಜನರು ತಮ್ಮ ಜನ್ಮದಿನದಂದು ಟ್ರೀ
+                ಪ್ಲಾಂಟೇಶನ್ ಮಾಡಲು ಬಯಸುತ್ತಾರೆ ಆದರೆ ಪ್ಲಾಂಟೇಶನ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗದವರಿಗೆ ಕೆಲವು ಕಾರಣಗಳಿಂದಾಗಿ. ಆದ್ದರಿಂದ, ನಾವು
+                ಸ್ಟಾರ್ಟ್‌ಅಪ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಿದ್ದೇವೆ ಅದರ ಮೂಲಕ ಯಾವುದೇ ವ್ಯಕ್ತಿ ತಮ್ಮ ಜನ್ಮದಿನದಂದು ಹುಟ್ಟುಹಬ್ಬದ ಮರ ನೆಡಲು
+                ಬಯಸುತ್ತಾರೆ
+                ಅದನ್ನು ನಮ್ಮಿಂದ ನೆಡಬಹುದು.
+            </article>
+
+            <article data-translate="ml" data-aos="fade-up" style="display: none;">പലരും അവരുടെ ജന്മദിനത്തിൽ ഒരു മരം
+                നടാൻ
+                ആഗ്രഹിക്കുന്നു, പക്ഷേ പ്ലാൻ്റേഷൻ ചെയ്യാൻ കഴിയാത്തവർക്ക് ചില കാരണങ്ങളാൽ. അതിനാൽ, ഞങ്ങൾ ഒരു സ്റ്റാർട്ടപ്പ്
+                ആരംഭിച്ചു, അതിലൂടെ അവരുടെ ജന്മദിനത്തിൽ ഒരു ജന്മദിന മരം നടാൻ ആഗ്രഹിക്കുന്ന ഏതൊരു വ്യക്തിക്കും ഞങ്ങളിൽ
+                നിന്ന്
+                അത് നടാം.
+            </article>
+
+            <article data-translate="ta" data-aos="fade-up" style="display: none;">பலர் தங்கள் பிறந்தநாளில் ஒரு
+                மரத்தோட்டம்
+                செய்ய விரும்புகிறார்கள், ஆனால் தோட்டம் செய்ய முடியாதவர்களுக்கு சில காரணங்களால். எனவே, நாங்கள் ஒரு
+                ஸ்டார்ட்அப்பைத் தொடங்கியுள்ளோம், இதன் மூலம் பிறந்தநாள் மரம் நடும் எவரும் எங்களிடம் இருந்து அதை நடலாம்.
+            </article>
+
+            <article data-translate="te" data-aos="fade-up" style="display: none;">చాలా మంది తమ పుట్టినరోజున ట్రీ
+                ప్లాంటేషన్
+                చేయాలనుకుంటున్నారు, కానీ కొన్ని కారణాల వల్ల ప్లాంటేషన్ చేయలేని వారు. కాబట్టి, మేము ఒక స్టార్టప్‌ని
+                ప్రారంభించాము, దీని ద్వారా ఎవరైనా వారి పుట్టినరోజున బర్త్‌డే ట్రీ ప్లాంటేషన్‌ను చేయాలనుకునే వారు మా
+                నుండి
+                నాటవచ్చు.
+            </article>
+
+            <article data-translate="or" data-aos="fade-up" style="display: none;">ଅନେକ ଲୋକ ନିଜ ଜନ୍ମଦିନରେ ଏକ ବୃକ୍ଷରୋପଣ
+                କରିବାକୁ ଚାହାଁନ୍ତି କିନ୍ତୁ କିଛି କାରଣ ହେତୁ ଯେଉଁମାନେ ବୃକ୍ଷରୋପଣ କରିବାକୁ ସକ୍ଷମ ନୁହଁନ୍ତି | ତେଣୁ, ଆମେ ଏକ
+                ଷ୍ଟାର୍ଟଅପ୍
+                ଆରମ୍ଭ କରିଛୁ ଯାହା ମାଧ୍ୟମରେ ଯେକ person ଣସି ବ୍ୟକ୍ତି ନିଜ ଜନ୍ମଦିନରେ ବୃକ୍ଷରୋପଣ କରିବାକୁ ଚାହୁଁଛନ୍ତି, ତାହା ଆମଠାରୁ
+                ଲଗାଇ ପାରିବେ |
+            </article>
+
+            <article data-translate="be" data-aos="fade-up" style="display: none;">অনেকেই তাদের জন্মদিনে বৃক্ষরোপণ করতে
+                চান
+                কিন্তু কিছু কারণে যারা বৃক্ষরোপণ করতে পারছেন না। তাই, আমরা একটি স্টার্টআপ শুরু করেছি যার মাধ্যমে যে কেউ
+                তাদের জন্মদিনে একটি জন্মদিনের বৃক্ষরোপণ করতে চান আমাদের কাছ থেকে এটি রোপণ করতে পারেন।
+            </article>
+
+            <article data-translate="as" data-aos="fade-up" style="display: none;">বহুতে জন্মদিনত Tree Plantation কৰিব
+                বিচাৰে কিন্তু কিছুমান কাৰণত যিসকলে Plantation কৰিব নোৱাৰে তেওঁলোকৰ বাবে। গতিকে, আমি এটা Startup আৰম্ভ
+                কৰিছো
+                যাৰ জৰিয়তে যিকোনো ব্যক্তিয়ে নিজৰ জন্মদিনত Birthday Tree Plantation কৰিব বিচাৰে আমাৰ পৰা ৰোপণ কৰিব
+                পাৰে।
+
+            </article>
+
+            <article data-translate="sd" data-aos="fade-up" style="display: none;">ڪيترائي ماڻهو پنهنجي سالگرهه تي وڻ
+                پوکڻ
+                چاهين ٿا پر ڪجهه سببن جي ڪري اهي ٻوٽا نه ٿا لڳائي سگهن. تنهن ڪري، اسان هڪ اسٽارٽ اپ شروع ڪيو آهي، جنهن
+                ذريعي
+                جيڪو به ماڻهو پنهنجي سالگره تي هڪ سالگره ٽري پلانٽ ڪرڻ چاهي ٿو اهو اسان کان پوکي سگهي ٿو.
+            </article>
+
+        </section>
 
         <!--................. Illustration ..................-->
 
@@ -357,19 +588,52 @@
                     tree.
                 </article>
 
-                <article data-translate="hi" style="display: none;" data-aos="fade-up"
+                <article data-translate="hi" data-aos="fade-up" style="display: none;"
                     class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
                     जैसे ही हमें आपका Birthday Tree का Order प्राप्त होगा, हम आपके Birthday Tree को लगाने की प्रक्रिया
                     शुरू कर देंगे और 3 वर्षों तक प्रति माह आपके वृक्ष का एक वीडियो अपलोड करेंगे, ताकि आप अपने वृक्ष की
                     Growth के बारे में जान सकें।</article>
+
+                    <article data-translate="pa" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        ਜਿਵੇਂ ਹੀ ਅਸੀਂ ਤੁਹਾਡਾ ਜਨਮ ਦਿਨ ਦੇ ਰੁੱਖ ਦਾ ਆਰਡਰ ਪ੍ਰਾਪਤ ਕਰਦੇ ਹਾਂ, ਅਸੀਂ ਤੁਹਾਡਾ ਜਨਮ ਦਿਨ ਦੇ ਰੁੱਖ ਨੂੰ ਲਗਾਉਣ ਦੀ ਪ੍ਰਕਿਰਿਆ ਸ਼ੁਰੂ ਕਰਾਂਗੇ ਅਤੇ 3 ਸਾਲਾਂ ਲਈ ਹਰ ਮਹੀਨੇ ਤੁਹਾਡੇ ਰੁੱਖ ਦਾ ਇੱਕ ਵੀਡੀਓ ਅੱਪਲੋਡ ਕਰਾਂਗੇ ਤਾਂ ਜੋ ਤੁਸੀਂ ਆਪਣੇ ਰੁੱਖ ਦੀ ਵਾਧ ਦੇ ਬਾਰੇ ਜਾਣ ਸਕੋ।
+                    </article>
+                    <article data-translate="gu" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        જેમ જ તમે તમારો બર્થડે ટ્રી ઓર્ડર મેળવીએ છીએ, અમે તમારો બર્થડે ટ્રી લગાવવાની પ્રક્રિયા શરૂ કરીશું અને 3 વર્ષ માટે દર મહિને તમારું વૃક્ષ એક વિડિયો અપલોડ કરીશું જેથી તમે તમારા વૃક્ષનો વિકાસ જાણી શકો.
+                    </article>
+                    <article data-translate="mr" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        जसेच आम्हाला तुमचा बर्थडे ट्री ऑर्डर प्राप्त होईल, आम्ही तुमच्या बर्थडे ट्री लावण्याची प्रक्रिया सुरू करू आणि ३ वर्षांसाठी दर महिन्याला तुमच्या झाडाचा एक व्हिडिओ अपलोड करू जेणेकरून तुम्हाला तुमच्या झाडाच्या वाढीविषयी माहिती मिळू शकेल.
+                    </article>
+                    <article data-translate="kn" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        ನಾವು ನಿಮ್ಮ ಹುಟ್ಟುಹಬ್ಬದ ಮರದ ಆರ್ಡರ್ ಅನ್ನು ಸ್ವೀಕರಿಸಿದ ತಕ್ಷಣ, ನಾವು ನಿಮ್ಮ ಹುಟ್ಟುಹಬ್ಬದ ಮರವನ್ನು ನೆಡುವ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಪ್ರಾರಂಭಿಸುತ್ತೇವೆ ಮತ್ತು ನಿಮ್ಮ ಮರದ ಬೆಳವಣಿಗೆಯನ್ನು ನೀವು ತಿಳಿದುಕೊಳ್ಳಲು 3 ವರ್ಷಗಳ ಕಾಲ ಪ್ರತಿ ತಿಂಗಳು ನಿಮ್ಮ ಮರದ ವೀಡಿಯೊವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡುತ್ತೇವೆ.
+                    </article>
+                    <article data-translate="ml" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        നിങ്ങളുടെ ബർത്ത്‌ഡേ ട്രീ ഓർഡർ ലഭിച്ചയുടൻ തന്നെ, നിങ്ങളുടെ ബർത്ത്‌ഡേ ട്രീ നടാനുള്ള പ്രക്രിയ ഞങ്ങൾ ആരംഭിക്കും, നിങ്ങളുടെ വൃക്ഷത്തിന്റെ വളർച്ച അറിയാൻ നിങ്ങൾക്ക് കഴിയുന്ന വിധം 3 വർഷത്തേക്ക് മാസംതോറും ഒരു വീഡിയോ അപ്‌ലോഡ് ചെയ്യും.
+                    </article>
+                    <article data-translate="ta" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        நாங்கள் உங்கள் பிறந்தநாள் மர ஆர்டர் பெற்றவுடன், உங்கள் பிறந்தநாள் மரத்தை நடும் செயல்முறையைத் தொடங்குவோம் மற்றும் 3 ஆண்டுகளுக்குத் தொடர்ந்து ஒவ்வொரு மாதமும் உங்கள் மர வளர்ச்சியை நீங்கள் அறிய ஒரு வீடியோவை பதிவேற்றுவோம்.
+                    </article>
+                    <article data-translate="te" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        మీ బర్త్‌డే ట్రీ ఆర్డర్ అందుకున్న వెంటనే, మేము మీ బర్త్‌డే ట్రీ నాటే ప్రక్రియను ప్రారంభిస్తాము మరియు మీ ట్రీ యొక్క వృద్ధి గురించి మీరు తెలుసుకోవడానికి 3 సంవత్సరాల పాటు ప్రతీ నెలా మీ ట్రీ యొక్క వీడియోను అప్‌లోడ్ చేస్తాము.
+                    </article>
+                    <article data-translate="or" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        ଆମେ ଆପଣଙ୍କର ବର୍ଥଡେ ଟ୍ରି ଆର୍ଡର୍ ପାଇଲା ପରେ, ଆମେ ଆପଣଙ୍କ ବର୍ଥଡେ ଟ୍ରି ଲଗାଇବାର ପ୍ରକ୍ରିୟା ଆରମ୍ଭ କରିବା, ଏବଂ ୩ ବର୍ଷ ପର୍ଯ୍ୟନ୍ତ ପ୍ରତି ମାସ ଆପଣଙ୍କ ଗଛର ଏକ ଭିଡିଓ ଅପଲୋଡ କରିବା ଯାହା ଆପଣଙ୍କର ଗଛର ବୃଦ୍ଧି ସମ୍ବନ୍ଧରେ ଜାଣି ପାରିବେ।
+                    </article>
+                    <article data-translate="be" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        যত তাড়াতাড়ি আমরা আপনার জন্মদিনের গাছের অর্ডার পাই, আমরা আপনার জন্মদিনের গাছ লাগানোর প্রক্রিয়া শুরু করব এবং 3 বছরের জন্য প্রতি মাসে আপনার গাছের একটি ভিডিও আপলোড করব যাতে আপনি আপনার গাছের বৃদ্ধির বিষয়ে জানতে পারেন।
+                    </article>
+                    <article data-translate="as" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        যেতিয়া আমি আপোনাৰ জন্মদিনৰ গছৰ অৰ্ডাৰ পাই, আমি আপোনাৰ জন্মদিনৰ গছ ৰোপণ কৰাৰ প্ৰক্ৰিয়া আৰম্ভ কৰিম আৰু 3 বছৰলৈ প্ৰতিখন মাহে আপোনাৰ গছৰ এটা ভিডিঅ' আপল'ড কৰিম যাতে আপুনি আপোনাৰ গছৰ বৃদ্ধি জানিব পাৰে।
+                    </article>
+                    <article data-translate="sd" data-aos="fade-up" style="display: none;" class="flex flex-col justify-center items-center text-center text-[#FFFFFFCC] px-10 text-lg md:text-2xl h-auto py-4">
+                        جيئن ئي اسان توهان جو سالگره وڻ جو آرڊر حاصل ڪريون ٿا، اسان توهان جي سالگره وڻ پوکڻ جو عمل شروع ڪنداسين ۽ 3 سالن تائين هر مهيني توهان جي وڻ جو هڪ وڊيو اپ لوڊ ڪنداسين ته جيئن توهان کي پنهنجي وڻ جي واڌ جي خبر پوي.
+                    </article>
 
             </div>
 
             <div class="mx-auto w-full max-w-screen-xl">
                 <h1 class="flex flex-col justify-center items-center my-20">
                     <span data-aos="fade-up"
-                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-white">Variety of
-                        Trees</span>
+                        class="text-center text-2xl md:text-4xl lg:text-5xl font-normal text-white">Variety of Trees</span>
                 </h1>
 
                 <div class="m-4 md:m-6 flex flex-col md:flex-row justify-center items-center gap-10">
@@ -385,6 +649,39 @@
                         <p class="text-[#12141D]" data-translate="hi" style="display: none;">फलों के पेड़ पक्षियों,
                             कीड़ों और मधुमक्खियों जैसे परागणकों के लिए भोजन और आश्रय प्रदान करते हैं, जो स्वस्थ
                             पारिस्थितिकी तंत्र और किसानों के लिए आय पैदा करने के लिए महत्वपूर्ण हैं।</p>
+
+                        <p class="text-[#12141D]" data-translate="pa" style="display: none;">ਫਲਾਂ ਦੇ ਰੁੱਖ ਪੰਛੀਆਂ, ਕੀੜੇ-ਮਕੌੜਿਆਂ ਅਤੇ ਮਧੂ-ਮੱਖੀਆਂ ਵਰਗੇ ਪਰਾਗਿਤ ਕਰਨ ਵਾਲਿਆਂ ਲਈ ਭੋਜਨ ਅਤੇ ਆਸਰਾ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ, ਜੋ ਕਿ ਸਿਹਤਮੰਦ ਵਾਤਾਵਰਣ ਪ੍ਰਣਾਲੀਆਂ ਅਤੇ ਕਿਸਾਨਾਂ ਲਈ ਆਮਦਨ ਪੈਦਾ ਕਰਨ ਲਈ ਮਹੱਤਵਪੂਰਨ ਹਨ।
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="gu" style="display: none;">ફળના વૃક્ષો પક્ષીઓ, જંતુઓ અને મધમાખી જેવા પરાગ રજકો માટે ખોરાક અને આશ્રય પૂરો પાડે છે, જે સ્વસ્થ ઇકોસિસ્ટમ અને ખેડૂતો માટે આવક પેદા કરવા માટે નિર્ણાયક છે.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="mr" style="display: none;">फळांची झाडे पक्षी, कीटक आणि मधमाश्या सारख्या परागक्यांना अन्न आणि निवारा देतात, जे निरोगी परिसंस्थेसाठी आणि शेतकऱ्यांसाठी उत्पन्न मिळवण्यासाठी महत्त्वपूर्ण आहेत.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="kn" style="display: none;">ಹಣ್ಣಿನ ಮರಗಳು ಪಕ್ಷಿಗಳು, ಕೀಟಗಳು ಮತ್ತು ಜೇನುನೊಣಗಳಂತಹ ಪರಾಗಸ್ಪರ್ಶಕಗಳಿಗೆ ಆಹಾರ ಮತ್ತು ಆಶ್ರಯವನ್ನು ಒದಗಿಸುತ್ತವೆ, ಇದು ಆರೋಗ್ಯಕರ ಪರಿಸರ ವ್ಯವಸ್ಥೆಗಳಿಗೆ ನಿರ್ಣಾಯಕವಾಗಿದೆ ಮತ್ತು ರೈತರಿಗೆ ಆದಾಯವನ್ನು ನೀಡುತ್ತದೆ.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="ml" style="display: none;">ഫലവൃക്ഷങ്ങൾ പക്ഷികൾ, പ്രാണികൾ, തേനീച്ചകൾ പോലുള്ള പരാഗണങ്ങൾ എന്നിവയ്ക്ക് ഭക്ഷണവും പാർപ്പിടവും നൽകുന്നു, അവ ആരോഗ്യകരമായ ആവാസവ്യവസ്ഥയ്ക്കും കർഷകർക്ക് വരുമാനം ഉണ്ടാക്കുന്നതിനും പ്രധാനമാണ്.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="ta" style="display: none;">பழ மரங்கள் பறவைகள், பூச்சிகள் மற்றும் தேனீக்கள் போன்ற மகரந்தச் சேர்க்கைகளுக்கு உணவு மற்றும் தங்குமிடம் வழங்குகின்றன, அவை ஆரோக்கியமான சுற்றுச்சூழல் அமைப்புகளுக்கு முக்கியமானவை மற்றும் விவசாயிகளுக்கு வருமானத்தை உருவாக்குகின்றன.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="te" style="display: none;">పండ్ల చెట్లు పక్షులు, కీటకాలు మరియు తేనెటీగలు వంటి పరాగ సంపర్కాలకు ఆహారం మరియు ఆశ్రయాన్ని అందిస్తాయి, ఇవి ఆరోగ్యకరమైన పర్యావరణ వ్యవస్థలకు కీలకమైనవి మరియు రైతులకు ఆదాయాన్ని అందిస్తాయి.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="or" style="display: none;">ଫଳ ଗଛ ପକ୍ଷୀ, କୀଟପତଙ୍ଗ ଏବଂ ମହୁମାଛି ପରି ପ୍ରଦୂଷଣକାରୀଙ୍କ ପାଇଁ ଖାଦ୍ୟ ଏବଂ ଆଶ୍ରୟ ଯୋଗାଇଥାଏ, ଯାହା ସୁସ୍ଥ ଇକୋସିଷ୍ଟମ ଏବଂ କୃଷକମାନଙ୍କ ପାଇଁ ଆୟ ସୃଷ୍ଟି ପାଇଁ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଅଟେ |
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="be" style="display: none;">ফলের গাছগুলি পাখি, পোকামাকড় এবং মৌমাছির মতো পরাগায়নকারীদের জন্য খাদ্য এবং আশ্রয় প্রদান করে, যা স্বাস্থ্যকর বাস্তুতন্ত্রের জন্য এবং কৃষকদের জন্য আয়ের জন্য অত্যন্ত গুরুত্বপূর্ণ।
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="as" style="display: none;">ফলমূলৰ গছে চৰাই, পোক-পৰুৱা, মৌমাখিৰ দৰে পৰগাছাৰ বাবে খাদ্য আৰু আশ্ৰয় প্ৰদান কৰে, যিবোৰ সুস্থ পৰিৱেশ তন্ত্ৰৰ বাবে অতি গুৰুত্বপূৰ্ণ আৰু কৃষকৰ বাবে আয়ৰ সৃষ্টিৰ বাবে অতি গুৰুত্বপূৰ্ণ।
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="sd" style="display: none;">ميوي جا وڻ پکين، حشرات، ۽ ماکيءَ وانگر پولينيٽرز لاءِ کاڌو ۽ پناهه فراهم ڪن ٿا، جيڪي صحتمند ماحولياتي نظام ۽ هارين لاءِ آمدني پيدا ڪرڻ لاءِ اهم آهن.
+                        </p>
                     </div>
 
                     <div data-aos="fade-up" class="w-11/12 md:w-4/5 bg-white text-black p-8">
@@ -395,6 +692,40 @@
                             peepal, neem.</p>
                         <p class="text-[#12141D]" data-translate="hi" style="display: none;">हमें पीपल, नीम जैसे
                             पर्यावरण अनुकूल पेड़ों की अधिक आवश्यकता है।</p>
+
+                        <p class="text-[#12141D]" data-translate="pa" style="display: none;">ਸਾਨੂੰ ਪੀਪਲ, ਨਿੰਮ ਵਰਗੇ ਵਾਤਾਵਰਣ ਅਨੁਕੂਲ ਰੁੱਖਾਂ ਦੀ ਲੋੜ ਹੈ।
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="gu" style="display: none;">આપણને પીપળ, લીમડા જેવા પર્યાવરણને અનુકૂળ વૃક્ષોની જરૂર છે.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="mr" style="display: none;">पिंपळ, कडुलिंब यांसारख्या पर्यावरणपूरक झाडांची गरज आहे.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="kn" style="display: none;">ಪೀಪಲ್, ಬೇವಿನಂತಹ ಪರಿಸರ ಸ್ನೇಹಿ ಮರಗಳು ನಮಗೆ ಹೆಚ್ಚು ಬೇಕು.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="ml" style="display: none;">പീപ്പൽ, വേപ്പ് തുടങ്ങിയ പരിസ്ഥിതി സൗഹൃദ മരങ്ങൾ നമുക്ക് കൂടുതൽ ആവശ്യമാണ്.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="ta" style="display: none;">பீப்பல், வேம்பு போன்ற சுற்றுச்சூழலுக்கு உகந்த மரங்கள் அதிகம் தேவை.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="te" style="display: none;">పీపుల్, వేప వంటి పర్యావరణ అనుకూల చెట్లు మనకు మరింత అవసరం.
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="or" style="display: none;">ଆମକୁ ପିପାଲ୍, ନିମ୍ ପରି ଅଧିକ ପରିବେଶ ଅନୁକୂଳ ଗଛ ଦରକାର |
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="be" style="display: none;">আমাদের আরও পরিবেশবান্ধব গাছ যেমন পিপল, নিম দরকার।
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="as" style="display: none;">আমাক পীপাল, নিম আদি পৰিৱেশ অনুকূল গছ অধিক লাগে।
+                        </p>
+
+                        <p class="text-[#12141D]" data-translate="sd" style="display: none;">اسان کي وڌيڪ ماحول دوست وڻن جي ضرورت آهي جهڙوڪ پيپل، نيم.
+                        </p>
+
                         <p class="invisible text-[#12141D]">Environmentally friendly</p>
                     </div>
 
@@ -416,9 +747,10 @@
             <div class="flex flex-wrap lg:flex-nowrap lg:flex-row justify-center items-center gap-10">
                 <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-normal">On Degraded Land</span>
+                        <span class="text-xl lg:text-2xl font-normal">On Degraded Land</span>
+                        <!-- <span data-translate="en" class="text-xl lg:text-2xl font-normal">On Degraded Land</span>
                         <span data-translate="hi" style="display: none;"
-                            class="text-xl lg:text-2xl font-normal mb-2">बंजर भूमि पर</span>
+                            class="text-xl lg:text-2xl font-normal mb-2">बंजर भूमि पर</span> -->
                     </h1>
                     <p data-translate="en" class="text-[#12141D]">According to the United Nations Convention to Combat
                         Desertification
@@ -431,15 +763,50 @@
                         लिए वृक्षारोपण ही एकमात्र स्थायी तरीका है।
                     </p>
 
+                    <p data-translate="pa" style="display: none;" class="text-[#12141D]">ਸੰਯੁਕਤ ਰਾਸ਼ਟਰ ਕਨਵੈਨਸ਼ਨ ਟੂ ਕਾਮਬੈਟ ਡੈਜ਼ਰਟੀਫਿਕੇਸ਼ਨ (UNCCD) ਦੇ ਅਨੁਸਾਰ, ਵਿਸ਼ਵ ਦੀ 25% ਤੋਂ ਵੱਧ ਜ਼ਮੀਨ ਪਹਿਲਾਂ ਹੀ ਘਟੀ ਹੋਈ ਹੈ, ਅਤੇ ਇਹ ਦਰ ਤੇਜ਼ੀ ਨਾਲ ਵੱਧ ਰਹੀ ਹੈ। ਵਿਗਿਆਨੀਆਂ ਦਾ ਮੰਨਣਾ ਹੈ ਕਿ ਦਰਖਤ ਲਗਾਉਣਾ ਹੀ ਖਰਾਬ ਹੋਈ ਜ਼ਮੀਨ ਨੂੰ ਬਹਾਲ ਕਰਨ ਦਾ ਇੱਕੋ ਇੱਕ ਟਿਕਾਊ ਤਰੀਕਾ ਹੈ।
+                    </p>
+
+                    <p data-translate="gu" style="display: none;" class="text-[#12141D]">યુનાઈટેડ નેશન્સ કન્વેન્શન ટુ કોમ્બેટ ડેઝર્ટિફિકેશન (UNCCD) મુજબ, વૈશ્વિક જમીનનો 25% થી વધુ ભાગ પહેલેથી જ અધોગતિ પામ્યો છે, અને આ દર ઝડપથી વધી રહ્યો છે. વૈજ્ઞાનિકો માને છે કે ક્ષતિગ્રસ્ત જમીનને પુનઃસ્થાપિત કરવાનો એકમાત્ર ટકાઉ માર્ગ વૃક્ષારોપણ છે.
+                    </p>
+
+                    <p data-translate="mr" style="display: none;" class="text-[#12141D]">युनायटेड नेशन्स कन्व्हेन्शन टू कॉम्बॅट डेजर्टिफिकेशन (UNCCD) नुसार, जगभरातील 25% पेक्षा जास्त जमीन आधीच निकृष्ट झाली आहे आणि हा दर झपाट्याने वाढत आहे. शास्त्रज्ञांचा असा विश्वास आहे की वृक्षारोपण हा निकृष्ट जमीन पुनर्संचयित करण्याचा एकमेव शाश्वत मार्ग आहे.
+                    </p>
+
+                    <p data-translate="kn" style="display: none;" class="text-[#12141D]">ಯುನೈಟೆಡ್ ನೇಷನ್ಸ್ ಕನ್ವೆನ್ಷನ್ ಟು ಕಾಂಬ್ಯಾಟ್ ಡೆಸರ್ಟಿಫಿಕೇಶನ್ (UNCCD) ಪ್ರಕಾರ, ಜಾಗತಿಕ ಭೂಮಿಯಲ್ಲಿ 25% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಈಗಾಗಲೇ ನಾಶವಾಗಿದೆ ಮತ್ತು ಈ ಪ್ರಮಾಣವು ವೇಗವಾಗಿ ಹೆಚ್ಚುತ್ತಿದೆ. ನಾಶವಾದ ಭೂಮಿಯನ್ನು ಪುನಃಸ್ಥಾಪಿಸಲು ಮರದ ನೆಡುವಿಕೆ ಮಾತ್ರ ಸಮರ್ಥನೀಯ ಮಾರ್ಗವಾಗಿದೆ ಎಂದು ವಿಜ್ಞಾನಿಗಳು ನಂಬುತ್ತಾರೆ.
+                    </p>
+
+                    <p data-translate="ml" style="display: none;" class="text-[#12141D]">യുണൈറ്റഡ് നേഷൻസ് കൺവെൻഷൻ ടു കോംബാറ്റ് ഡെസേർട്ടിഫിക്കേഷൻ (UNCCD) അനുസരിച്ച്, ആഗോള ഭൂമിയുടെ 25% ത്തിലധികം ഇതിനകം നശിച്ചു, ഈ നിരക്ക് അതിവേഗം വർദ്ധിച്ചുകൊണ്ടിരിക്കുകയാണ്. നശിച്ച ഭൂമി പുനഃസ്ഥാപിക്കുന്നതിനുള്ള ഏക സുസ്ഥിര മാർഗം മരങ്ങൾ നട്ടുപിടിപ്പിക്കുകയാണെന്ന് ശാസ്ത്രജ്ഞർ വിശ്വസിക്കുന്നു.
+                    </p>
+
+                    <p data-translate="ta" style="display: none;" class="text-[#12141D]">பாலைவனமாக்கலை எதிர்த்துப் போராடுவதற்கான ஐக்கிய நாடுகளின் மாநாட்டின் (UNCCD) படி, உலக நிலப்பரப்பில் 25% க்கும் அதிகமானவை ஏற்கனவே சீரழிந்துள்ளன, மேலும் இந்த விகிதம் வேகமாக அதிகரித்து வருகிறது. சிதைந்த நிலத்தை மீட்டெடுக்க மரங்களை வளர்ப்பது மட்டுமே நிலையான வழி என்று விஞ்ஞானிகள் நம்புகின்றனர்.
+                    </p>
+
+                    <p data-translate="te" style="display: none;" class="text-[#12141D]">యునైటెడ్ నేషన్స్ కన్వెన్షన్ టు కంబాట్ డెసర్టిఫికేషన్ (UNCCD) ప్రకారం, ప్రపంచవ్యాప్తంగా 25% పైగా భూమి ఇప్పటికే క్షీణించింది మరియు ఈ రేటు వేగంగా పెరుగుతోంది. క్షీణించిన భూమిని పునరుద్ధరించడానికి చెట్ల పెంపకం మాత్రమే స్థిరమైన మార్గమని శాస్త్రవేత్తలు భావిస్తున్నారు.
+                    </p>
+
+                    <p data-translate="or" style="display: none;" class="text-[#12141D]">ମିଳିତ ଜାତିସଂଘର ସମ୍ମିଳନୀ ଟୁ କମ୍ବିଟ୍ ମରୁଭୂମି (UNCCD) ଅନୁଯାୟୀ ବିଶ୍ global ର 25% ରୁ ଅଧିକ ଅବନତି ଘଟିଛି ଏବଂ ଏହି ହାର ଦ୍ରୁତ ଗତିରେ ବୃଦ୍ଧି ପାଉଛି। ବ de ଜ୍ ists ାନିକମାନେ ବିଶ୍ୱାସ କରନ୍ତି ଯେ ଖରାପ ବୃକ୍ଷରୋପଣ ପାଇଁ ବୃକ୍ଷରୋପଣ ହେଉଛି ଏକମାତ୍ର ସ୍ଥାୟୀ ଉପାୟ |
+                    </p>
+
+                    <p data-translate="be" style="display: none;" class="text-[#12141D]">ইউনাইটেড নেশনস কনভেনশন টু কমব্যাট মরুকরণ (UNCCD) অনুসারে, বিশ্বব্যাপী 25% এরও বেশি জমি ইতিমধ্যেই ক্ষয়প্রাপ্ত হয়েছে এবং এই হার দ্রুত বৃদ্ধি পাচ্ছে। বিজ্ঞানীরা বিশ্বাস করেন যে ক্ষয়প্রাপ্ত জমি পুনরুদ্ধারের একমাত্র টেকসই উপায় বৃক্ষরোপণ।
+                    </p>
+
+                    <p data-translate="as" style="display: none;" class="text-[#12141D]">ৰাষ্ট্ৰসংঘৰ মৰুভূমিৰ বিৰুদ্ধে যুঁজিবলৈ চুক্তি (UNCCD) অনুসৰি বিশ্বৰ ২৫%তকৈ অধিক ভূমি ইতিমধ্যে অৱক্ষয় হৈছে, আৰু এই হাৰ দ্ৰুতগতিত বৃদ্ধি পাইছে। বিজ্ঞানীসকলৰ মতে বৃক্ষৰোপণেই হৈছে অৱক্ষয়ী ভূমি পুনৰুদ্ধাৰৰ একমাত্ৰ বহনক্ষম উপায়।
+                    </p>
+
+                    <p data-translate="sd" style="display: none;" class="text-[#12141D]">گڏيل قومن جي ڪنوينشن ٽو ڪمبيٽ ڊيزرٽيفڪيشن (UNCCD) جي مطابق، 25 سيڪڙو کان وڌيڪ عالمي زمين اڳ ۾ ئي خراب ٿي چڪي آهي، ۽ اها شرح تيزي سان وڌي رهي آهي. سائنسدانن جو خيال آهي ته وڻ پوکڻ ئي تباهي واري زمين کي بحال ڪرڻ جو واحد پائيدار طريقو آهي.
+                    </p>
+
                     <img src="./img/land.png" class="my-10" />
                 </div>
 
                 <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-normal">On
+                        <span class="text-xl lg:text-2xl font-normal">On
+                            Urban Forest for Cities</span>
+                        <!-- <span data-translate="en" class="text-xl lg:text-2xl font-normal">On
                             Urban Forest for Cities</span>
                         <span data-translate="hi" style="display: none;"
-                            class="text-xl lg:text-2xl font-normal mb-2">शहरों के लिए</span>
+                            class="text-xl lg:text-2xl font-normal mb-2">शहरों के लिए</span> -->
 
                     </h1>
                     <p data-translate="en" class="text-[#12141D]">Cities are realizing the benefits of urban forests.
@@ -456,15 +823,50 @@
                         शहर को शहरी वन की जरूरत है।
 
                     </p>
+                    
+                    <p data-translate="pa" style="display: none;" class="text-[#12141D]">ਸ਼ਹਿਰਾਂ ਨੂੰ ਸ਼ਹਿਰੀ ਜੰਗਲਾਂ ਦੇ ਫਾਇਦਿਆਂ ਦਾ ਅਹਿਸਾਸ ਹੋ ਰਿਹਾ ਹੈ। ਰੁੱਖ ਕੁਦਰਤੀ ਏਅਰ ਕੰਡੀਸ਼ਨਰਾਂ ਵਾਂਗ ਕੰਮ ਕਰਕੇ, ਆਪਣੇ ਪੱਤਿਆਂ ਰਾਹੀਂ ਪਾਣੀ ਦੀ ਵਾਸ਼ਪ ਛੱਡ ਕੇ ਅਤੇ ਗਲੀਆਂ ਅਤੇ ਇਮਾਰਤਾਂ ਨੂੰ ਛਾਂ ਦੇ ਕੇ ਸ਼ਹਿਰਾਂ ਨੂੰ ਠੰਡਾ ਕਰਦੇ ਹਨ। ਇਹ ਸ਼ਹਿਰੀ ਗਰਮੀ ਟਾਪੂ ਪ੍ਰਭਾਵ ਨੂੰ ਘਟਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ. ਹੀਟਵੇਵ ਕਾਰਨ ਹਰ ਸ਼ਹਿਰ ਨੂੰ ਅਰਬਨ ਫੋਰੈਸਟ ਦੀ ਲੋੜ ਹੈ।
+                    </p>
+
+                    <p data-translate="gu" style="display: none;" class="text-[#12141D]">શહેરો શહેરી જંગલોના ફાયદાઓ સમજી રહ્યા છે. વૃક્ષો કુદરતી એર કંડિશનરની જેમ કામ કરીને, તેમના પાંદડામાંથી પાણીની વરાળ છોડીને અને શેરીઓ અને ઇમારતોને શેડ કરીને શહેરોને ઠંડુ કરે છે. આ શહેરી ગરમી ટાપુની અસરને ઘટાડવામાં મદદ કરે છે. હીટવેવને કારણે દરેક શહેરને અર્બન ફોરેસ્ટની જરૂર છે.
+                    </p>
+
+                    <p data-translate="mr" style="display: none;" class="text-[#12141D]">शहरी जंगलांचे फायदे शहरांना जाणवत आहेत. झाडे नैसर्गिक वातानुकूलित यंत्रांप्रमाणे काम करून, त्यांच्या पानांमधून पाण्याची वाफ सोडवून आणि रस्त्यांवर आणि इमारतींना सावली देऊन शहरांना थंड करतात. हे शहरी उष्णता बेट प्रभाव कमी करण्यास मदत करते. उष्णतेच्या लाटेमुळे प्रत्येक शहराला अर्बन फॉरेस्टची गरज आहे.
+                    </p>
+
+                    <p data-translate="kn" style="display: none;" class="text-[#12141D]">ನಗರ ಅರಣ್ಯಗಳ ಪ್ರಯೋಜನಗಳನ್ನು ನಗರಗಳು ಅರಿತುಕೊಳ್ಳುತ್ತಿವೆ. ಮರಗಳು ನೈಸರ್ಗಿಕ ಹವಾನಿಯಂತ್ರಣಗಳಂತೆ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ಮೂಲಕ ನಗರಗಳನ್ನು ತಂಪಾಗಿಸುತ್ತವೆ, ಅವುಗಳ ಎಲೆಗಳ ಮೂಲಕ ನೀರಿನ ಆವಿಯನ್ನು ಬಿಡುಗಡೆ ಮಾಡುತ್ತವೆ ಮತ್ತು ಬೀದಿಗಳು ಮತ್ತು ಕಟ್ಟಡಗಳಿಗೆ ನೆರಳು ನೀಡುತ್ತವೆ. ಇದು ನಗರ ಶಾಖ ದ್ವೀಪದ ಪರಿಣಾಮವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ. ಶಾಖದ ಅಲೆಯಿಂದಾಗಿ ಪ್ರತಿ ನಗರಕ್ಕೂ ನಗರ ಅರಣ್ಯದ ಅಗತ್ಯವಿದೆ.
+                    </p>
+
+                    <p data-translate="ml" style="display: none;" class="text-[#12141D]">നഗര വനങ്ങളുടെ നേട്ടങ്ങൾ നഗരങ്ങൾ തിരിച്ചറിയുന്നു. മരങ്ങൾ പ്രകൃതിദത്ത എയർ കണ്ടീഷണറുകൾ പോലെ പ്രവർത്തിച്ച് നഗരങ്ങളെ തണുപ്പിക്കുന്നു, അവയുടെ ഇലകളിലൂടെ ജലബാഷ്പം പുറത്തുവിടുകയും തെരുവുകളിലും കെട്ടിടങ്ങളിലും തണലുണ്ടാക്കുകയും ചെയ്യുന്നു. ഇത് അർബൻ ഹീറ്റ് ഐലൻഡ് പ്രഭാവം കുറയ്ക്കാൻ സഹായിക്കുന്നു. ഹീറ്റ്‌വേവ് കാരണം എല്ലാ നഗരങ്ങൾക്കും അർബൻ ഫോറസ്റ്റ് ആവശ്യമാണ്.
+                    </p>
+
+                    <p data-translate="ta" style="display: none;" class="text-[#12141D]">நகர்ப்புற காடுகளின் நன்மைகளை நகரங்கள் உணர்ந்து வருகின்றன. மரங்கள் இயற்கையான காற்றுச்சீரமைப்பிகள் போல செயல்படுவதன் மூலம் நகரங்களை குளிர்விக்கின்றன, அவற்றின் இலைகள் வழியாக நீராவியை வெளியிடுகின்றன மற்றும் தெருக்கள் மற்றும் கட்டிடங்களுக்கு நிழல் தருகின்றன. இது நகர்ப்புற வெப்ப தீவு விளைவைக் குறைக்க உதவுகிறது. வெப்ப அலையின் காரணமாக ஒவ்வொரு நகரத்திற்கும் நகர்ப்புற காடுகள் தேவைப்படுகின்றன.
+                    </p>
+
+                    <p data-translate="te" style="display: none;" class="text-[#12141D]">పట్టణ అడవుల ప్రయోజనాలను నగరాలు గుర్తిస్తున్నాయి. చెట్లు సహజమైన ఎయిర్ కండిషనర్‌ల వలె పని చేయడం ద్వారా నగరాలను చల్లబరుస్తాయి, వాటి ఆకుల ద్వారా నీటి ఆవిరిని విడుదల చేస్తాయి మరియు వీధులు మరియు భవనాలను షేడింగ్ చేస్తాయి. ఇది అర్బన్ హీట్ ఐలాండ్ ప్రభావాన్ని తగ్గించడంలో సహాయపడుతుంది. హీట్‌వేవ్ కారణంగా ప్రతి నగరానికి అర్బన్ ఫారెస్ట్ అవసరం.
+                    </p>
+
+                    <p data-translate="or" style="display: none;" class="text-[#12141D]">ସହରାଞ୍ଚଳ ଜଙ୍ଗଲର ଲାଭ ସହରଗୁଡିକ ହୃଦୟଙ୍ଗମ କରୁଛନ୍ତି | ଗଛଗୁଡିକ ପ୍ରାକୃତିକ ଏୟାର କଣ୍ଡିସନର ପରି କାର୍ଯ୍ୟ କରି, ପତ୍ର ମାଧ୍ୟମରେ ଜଳୀୟ ବାଷ୍ପ ଛାଡି ରାସ୍ତା ଏବଂ ଅଟ୍ଟାଳିକା ଛାୟା କରି ସହରଗୁଡ଼ିକୁ ଥଣ୍ଡା କରିଥାଏ | ଏହା ସହରୀ ଉତ୍ତାପ ଦ୍ୱୀପ ପ୍ରଭାବକୁ ହ୍ରାସ କରିବାରେ ସାହାଯ୍ୟ କରେ | ହିଟ୍ୱେଭ୍ ହେତୁ ପ୍ରତ୍ୟେକ ସହର ସହରୀ ଜଙ୍ଗଲ ଆବଶ୍ୟକ |
+                    </p>
+
+                    <p data-translate="be" style="display: none;" class="text-[#12141D]">শহরগুলি শহুরে বনের সুবিধাগুলি উপলব্ধি করছে। গাছগুলি প্রাকৃতিক এয়ার কন্ডিশনারগুলির মতো কাজ করে, তাদের পাতার মাধ্যমে জলীয় বাষ্প নির্গত করে এবং রাস্তা এবং ভবনগুলিকে ছায়া দিয়ে শহরগুলিকে শীতল করে। এটি শহুরে তাপ দ্বীপের প্রভাব কমাতে সাহায্য করে। হিটওয়েভের কারণে প্রতিটি শহরেই প্রয়োজন আরবান ফরেস্ট।
+                    </p>
+
+                    <p data-translate="as" style="display: none;" class="text-[#12141D]">চহৰসমূহে নগৰীয়া বনাঞ্চলৰ উপকাৰিতাৰ কথা উপলব্ধি কৰিছে। গছবোৰে প্ৰাকৃতিক এয়াৰ কণ্ডিচনাৰৰ দৰে কাম কৰি, পাতৰ মাজেৰে জলীয় বাষ্প মুক্ত কৰি আৰু ৰাস্তা আৰু অট্টালিকাক ছাঁ দি চহৰবোৰ শীতল কৰে। ইয়াৰ ফলত নগৰীয়া তাপ দ্বীপৰ প্ৰভাৱ হ্ৰাস কৰাত সহায় কৰে। Heatwave ৰ বাবে প্ৰতিখন চহৰৰ প্ৰয়োজন Urban Forest।
+                    </p>
+
+                    <p data-translate="sd" style="display: none;" class="text-[#12141D]">شهر شهري ٻيلن جي فائدن کي محسوس ڪري رهيا آهن. وڻ شهر کي قدرتي ايئرڪنڊيشنر وانگر ڪم ڪري، پنن ذريعي پاڻي جي بخارن کي ڇڏڻ ۽ گهٽين ۽ عمارتن کي ڇانو ڏئي شهر کي ٿڌو ڪن ٿا. هي شهري گرمي ٻيٽ جي اثر کي گهٽائڻ ۾ مدد ڪري ٿو. هيٽ ويو جي ڪري هر شهر کي اربن فاريسٽ جي ضرورت آهي.
+                    </p>
+
 
                     <img src="./img/building.png" class="my-10" />
                 </div>
 
                 <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-normal">On Farmer’s Land</span>
+                        <span class="text-xl lg:text-2xl font-normal">On Farmer’s Land</span>
+                        <!-- <span data-translate="en" class="text-xl lg:text-2xl font-normal">On Farmer’s Land</span>
                         <span data-translate="hi" class="text-xl lg:text-2xl font-normal mb-2"
-                            style="font-family: 'Microsoft Himalaya'; display: none;">किसानों की जमीन पर</span>
+                            style="font-family: 'Microsoft Himalaya'; display: none;">किसानों की जमीन पर</span> -->
                     </h1>
                     <p data-translate="en" class="text-[#12141D]">We will be plant fruit trees on the farmers land. Then
                         we will take care of that tree for 3 years. When that tree starts bearing fruits, the farmer
@@ -474,6 +876,39 @@
                     <p data-translate="hi" style="display: none;" class="text-[#12141D]">हम किसानों की ज़मीन पर फलों के
                         पेड़ लगाएंगे। फिर हम उस पेड़ की 3 साल तक देखभाल करेंगे। जब वह पेड़ फल देने लगेगा, तो किसान अपने
                         आप ही फल तोड़कर बेच देगा। फलों से होने वाली सारी आय किसान अपने पास ही रखेगा।
+                    </p>
+                    
+                    <p data-translate="pa" style="display: none;" class="text-[#12141D]">ਅਸੀਂ ਕਿਸਾਨਾਂ ਦੀ ਜ਼ਮੀਨ 'ਤੇ ਫਲਦਾਰ ਬੂਟੇ ਲਗਾਵਾਂਗੇ। ਫਿਰ ਅਸੀਂ 3 ਸਾਲ ਤੱਕ ਉਸ ਰੁੱਖ ਦੀ ਦੇਖਭਾਲ ਕਰਾਂਗੇ। ਜਦੋਂ ਉਹ ਰੁੱਖ ਫਲ ਦੇਣ ਲੱਗ ਪੈਂਦਾ ਹੈ, ਕਿਸਾਨ ਆਪਣੇ ਆਪ ਹੀ ਫਲ ਤੋੜ ਕੇ ਵੇਚਦਾ ਹੈ। ਕਿਸਾਨ ਫਲਾਂ ਤੋਂ ਹੋਣ ਵਾਲੀ ਸਾਰੀ ਆਮਦਨ ਆਪਣੇ ਕੋਲ ਰੱਖੇਗਾ।
+                    </p>
+
+                    <p data-translate="gu" style="display: none;" class="text-[#12141D]">અમે ખેડૂતોની જમીન પર ફળોના વૃક્ષો વાવીશું. પછી અમે તે વૃક્ષની 3 વર્ષ સુધી સંભાળ રાખીશું. જ્યારે તે ઝાડ ફળ આપવાનું શરૂ કરે છે, ત્યારે ખેડૂત આપોઆપ ફળો તોડીને વેચશે. ફળોની બધી આવક ખેડૂત પોતાની પાસે રાખશે.
+                    </p>
+
+                    <p data-translate="mr" style="display: none;" class="text-[#12141D]">शेतकऱ्यांच्या जमिनीवर फळझाडे लावणार आहोत. मग आम्ही त्या झाडाची 3 वर्षे काळजी घेऊ. त्या झाडाला फळे लागल्यावर शेतकरी आपोआप फळे तोडून विकतो. फळांपासून मिळणारे सर्व उत्पन्न शेतकरी स्वत:कडे ठेवेल.
+                    </p>
+
+                    <p data-translate="kn" style="display: none;" class="text-[#12141D]">ರೈತರ ಜಮೀನಿನಲ್ಲಿ ಹಣ್ಣಿನ ಗಿಡಗಳನ್ನು ನೆಡುತ್ತೇವೆ. ನಂತರ ಆ ಮರವನ್ನು 3 ವರ್ಷಗಳ ಕಾಲ ನೋಡಿಕೊಳ್ಳುತ್ತೇವೆ. ಆ ಮರವು ಹಣ್ಣುಗಳನ್ನು ನೀಡಲು ಪ್ರಾರಂಭಿಸಿದಾಗ, ರೈತರು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಹಣ್ಣುಗಳನ್ನು ಕಿತ್ತು ಮಾರಾಟ ಮಾಡುತ್ತಾರೆ. ಹಣ್ಣುಗಳಿಂದ ಬರುವ ಎಲ್ಲಾ ಆದಾಯವನ್ನು ರೈತ ತನ್ನ ಬಳಿಯೇ ಇಟ್ಟುಕೊಳ್ಳುತ್ತಾನೆ.
+                    </p>
+
+                    <p data-translate="ml" style="display: none;" class="text-[#12141D]">കർഷകരുടെ ഭൂമിയിൽ ഫലവൃക്ഷങ്ങൾ നട്ടുപിടിപ്പിക്കും. പിന്നെ 3 വർഷം ഞങ്ങൾ ആ മരത്തെ പരിപാലിക്കും. ആ മരം ഫലം കായ്ക്കാൻ തുടങ്ങുമ്പോൾ, കർഷകൻ യാന്ത്രികമായി പഴങ്ങൾ പറിച്ചെടുത്ത് വിൽക്കും. പഴങ്ങളിൽ നിന്നുള്ള എല്ലാ വരുമാനവും കർഷകൻ തൻ്റെ കൈവശം സൂക്ഷിക്കും.
+                    </p>
+
+                    <p data-translate="ta" style="display: none;" class="text-[#12141D]">விவசாயிகளின் நிலத்தில் பழ மரங்களை நடுவோம். பிறகு அந்த மரத்தை 3 வருடங்கள் பராமரிப்போம். அந்த மரம் காய்க்க ஆரம்பித்ததும், விவசாயி தானாகவே பழங்களைப் பறித்து விற்பனை செய்வார். பழங்கள் மூலம் கிடைக்கும் வருமானம் அனைத்தையும் விவசாயி தன்னிடமே வைத்துக் கொள்வான்.
+                    </p>
+
+                    <p data-translate="te" style="display: none;" class="text-[#12141D]">రైతుల భూముల్లో పండ్ల మొక్కలు నాటుతాం. అప్పుడు ఆ చెట్టును 3 సంవత్సరాలు చూసుకుంటాం. ఆ చెట్టు ఫలాలను ఇవ్వడం ప్రారంభించినప్పుడు, రైతు ఆటోమేటిక్‌గా పండ్లను తెంపి విక్రయిస్తాడు. పండ్ల ద్వారా వచ్చే ఆదాయాన్ని రైతు తన వద్దే ఉంచుకుంటాడు.
+                    </p>
+
+                    <p data-translate="or" style="display: none;" class="text-[#12141D]">ଆମେ କୃଷକ ଜମିରେ ଫଳ ଗଛ ଲଗାଇବୁ | ତା’ପରେ ଆମେ ସେହି ଗଛର 3 ବର୍ଷ ଯତ୍ନ ନେବୁ | ଯେତେବେଳେ ସେହି ଗଛ ଫଳ ଦେବା ଆରମ୍ଭ କରେ, କୃଷକ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଫଳଗୁଡିକ ଛଡ଼ାଇ ବିକ୍ରୟ କରିବ | କୃଷକ ଫଳରୁ ସମସ୍ତ ଆୟକୁ ନିଜ ପାଖରେ ରଖିବେ |
+                    </p>
+
+                    <p data-translate="be" style="display: none;" class="text-[#12141D]">আমরা কৃষকের জমিতে ফলের গাছ লাগাব। তারপর সেই গাছের পরিচর্যা করব ৩ বছর। সেই গাছে ফল ধরলে কৃষক স্বয়ংক্রিয়ভাবে ফল তুলে বিক্রি করবে। ফলের সব আয় নিজের কাছে রাখবে কৃষক।
+                    </p>
+
+                    <p data-translate="as" style="display: none;" class="text-[#12141D]">আমি কৃষকৰ মাটিত ফলমূলৰ গছ ৰোপণ কৰিম। তাৰ পিছত আমি সেই গছজোপাৰ যত্ন লম ৩ বছৰ। সেই গছজোপাই যেতিয়া ফল দিবলৈ আৰম্ভ কৰিব তেতিয়া খেতিয়কে স্বয়ংক্ৰিয়ভাৱে ফলবোৰ ছিঙি বিক্ৰী কৰিব। কৃষকে ফলৰ পৰা পোৱা সকলো উপাৰ্জন নিজৰ লগত ৰাখিব।
+                    </p>
+
+                    <p data-translate="sd" style="display: none;" class="text-[#12141D]">هارين جي زمينن تي ميوي جا وڻ پوکينداسين. پوءِ ان وڻ جي 3 سالن تائين سنڀال ڪنداسين. جڏهن اهو وڻ ميوو ڏيڻ شروع ڪري ٿو، ته هاريءَ پنهنجو پاڻ ميوو ٽوڙي وڪڻندو. هاري ميون جي سموري آمدني پاڻ وٽ رکندو.
                     </p>
 
                     <img src="./img/trees.png" class="my-10" />
@@ -497,27 +932,68 @@
 
                 <div data-aos="fade-up" class="w-full md:w-4/5 bg-white text-black p-8 border rounded-3xl">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Maintenance
+                        <span class="text-xl lg:text-2xl font-semibold text-[#529801]">Maintenance
+                            of your birthday
+                            Tree</span>
+                        <!-- <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Maintenance
                             of your birthday
                             Tree</span>
                         <span data-translate="hi" style="display: none;"
-                            class="text-xl lg:text-2xl font-semibold text-[#529801]">जन्मदिन के पेड़ का रखरखाव</span>
+                            class="text-xl lg:text-2xl font-semibold text-[#529801]">जन्मदिन के पेड़ का रखरखाव</span> -->
                     </h1>
+                    
                     <p data-translate="en" class="text-[#12141D]">Every tree wants 03 year maintenance so your tree will
                         receives expert care for at least 3 years after planting.
                     </p>
+
                     <p data-translate="hi" style="display: none;" class="text-[#12141D]">प्रत्येक पेड़ को 3 वर्ष तक
                         रखरखाव की आवश्यकता होती है, इसलिए आपके पेड़ को Plantation के बाद कम से कम 3 वर्षों तक विशेषज्ञ
                         देखभाल प्राप्त होगी।
                     </p>
+                    
+                    <p data-translate="pa" style="display: none;" class="text-[#12141D]">ਹਰ ਦਰੱਖਤ 03 ਸਾਲ ਦੀ ਦੇਖਭਾਲ ਚਾਹੁੰਦਾ ਹੈ ਤਾਂ ਜੋ ਤੁਹਾਡੇ ਰੁੱਖ ਨੂੰ ਲਾਉਣ ਤੋਂ ਬਾਅਦ ਘੱਟੋ-ਘੱਟ 3 ਸਾਲਾਂ ਤੱਕ ਮਾਹਰ ਦੇਖਭਾਲ ਪ੍ਰਾਪਤ ਹੋਵੇ।
+                    </p>
+
+                    <p data-translate="gu" style="display: none;" class="text-[#12141D]">દરેક વૃક્ષ 03 વર્ષની જાળવણી ઇચ્છે છે જેથી તમારા વૃક્ષને રોપ્યા પછી ઓછામાં ઓછા 3 વર્ષ સુધી નિષ્ણાત સંભાળ પ્રાપ્ત થશે.
+                    </p>
+
+                    <p data-translate="mr" style="display: none;" class="text-[#12141D]">प्रत्येक झाडाला 03 वर्षांची देखभाल हवी असते त्यामुळे तुमच्या झाडाला लागवडीनंतर किमान 3 वर्षे तज्ञांची काळजी मिळेल.
+                    </p>
+
+                    <p data-translate="kn" style="display: none;" class="text-[#12141D]">ಪ್ರತಿ ಮರವು 03 ವರ್ಷಗಳ ನಿರ್ವಹಣೆಯನ್ನು ಬಯಸುತ್ತದೆ ಆದ್ದರಿಂದ ನಿಮ್ಮ ಮರವು ನೆಟ್ಟ ನಂತರ ಕನಿಷ್ಠ 3 ವರ್ಷಗಳವರೆಗೆ ತಜ್ಞರ ಆರೈಕೆಯನ್ನು ಪಡೆಯುತ್ತದೆ.
+                    </p>
+
+                    <p data-translate="ml" style="display: none;" class="text-[#12141D]">ഓരോ മരത്തിനും 03 വർഷത്തെ അറ്റകുറ്റപ്പണി ആവശ്യമാണ്, അതിനാൽ നട്ട് 3 വർഷമെങ്കിലും നിങ്ങളുടെ വൃക്ഷത്തിന് വിദഗ്ധ പരിചരണം ലഭിക്കും.
+                    </p>
+
+                    <p data-translate="ta" style="display: none;" class="text-[#12141D]">ஒவ்வொரு மரமும் 03 வருட பராமரிப்பை விரும்புகிறது, எனவே உங்கள் மரம் நடவு செய்த பிறகு குறைந்தது 3 ஆண்டுகளுக்கு நிபுணர் கவனிப்பைப் பெறும்.
+                    </p>
+
+                    <p data-translate="te" style="display: none;" class="text-[#12141D]">ప్రతి చెట్టుకు 03 సంవత్సరాల నిర్వహణ కావాలి కాబట్టి మీ చెట్టు నాటిన తర్వాత కనీసం 3 సంవత్సరాల పాటు నిపుణుల సంరక్షణను పొందుతుంది.
+                    </p>
+
+                    <p data-translate="or" style="display: none;" class="text-[#12141D]">ପ୍ରତ୍ୟେକ ଗଛ 03 ବର୍ଷର ରକ୍ଷଣାବେକ୍ଷଣ ଚାହୁଁଛି ତେଣୁ ବୃକ୍ଷ ରୋପଣ ପରେ ଅତି କମରେ 3 ବର୍ଷ ପାଇଁ ବିଶେଷଜ୍ଞ ଯତ୍ନ ଗ୍ରହଣ କରିବେ |
+                    </p>
+
+                    <p data-translate="be" style="display: none;" class="text-[#12141D]">প্রতিটি গাছ 03 বছরের রক্ষণাবেক্ষণ চায় তাই আপনার গাছ রোপণের পর কমপক্ষে 3 বছর বিশেষজ্ঞ যত্ন পাবে।
+                    </p>
+
+                    <p data-translate="as" style="display: none;" class="text-[#12141D]">প্ৰতিটো গছে ০৩ বছৰৰ ৰক্ষণাবেক্ষণ বিচাৰে গতিকে আপোনাৰ গছজোপা ৰোপণৰ পিছত কমেও ৩ বছৰৰ বাবে বিশেষজ্ঞৰ যত্ন লাভ কৰিব।
+                    </p>
+
+                    <p data-translate="sd" style="display: none;" class="text-[#12141D]">هر وڻ کي 03 سالن جي سار سنڀال جي ضرورت آهي تنهنڪري توهان جو وڻ پوکڻ کان پوءِ گهٽ ۾ گهٽ 3 سالن تائين ماهرن جي سنڀال حاصل ڪندو.
+                    </p>
+
                 </div>
 
                 <div data-aos="fade-up" class="w-full md:w-4/5 bg-white text-black p-8 border rounded-3xl">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Separate Tree
+                        <span class="text-xl lg:text-2xl font-semibold text-[#529801]">Separate Tree
+                            Account</span>
+                        <!-- <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Separate Tree
                             Account</span>
                         <span data-translate="hi" style="display: none;"
-                            class="text-xl lg:text-2xl font-semibold text-[#529801]">अलग वृक्ष खाता</span>
+                            class="text-xl lg:text-2xl font-semibold text-[#529801]">अलग वृक्ष खाता</span> -->
                     </h1>
                     <p data-translate="en" class="text-[#12141D]">We will create a separate Birthday Tree Account of
                         your tree to upload monthly video.
@@ -525,6 +1001,39 @@
                     <p data-translate="hi" style="display: none;" class="text-[#12141D]">हम आपके पेड़ का एक अलग Birthday
                         Tree Account बनाएंगे, ताकि उस पर मासिक वीडियो अपलोड किया जा सके।
                     </p>
+                    <p data-translate="pa" style="display: none;" class="text-[#12141D]">ਅਸੀਂ ਮਹੀਨਾਵਾਰ ਵੀਡੀਓ ਅੱਪਲੋਡ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਰੁੱਖ ਦਾ ਇੱਕ ਵੱਖਰਾ ਜਨਮਦਿਨ ਟ੍ਰੀ ਖਾਤਾ ਬਣਾਵਾਂਗੇ।
+                    </p>
+
+                    <p data-translate="gu" style="display: none;" class="text-[#12141D]">માસિક વિડિયો અપલોડ કરવા માટે અમે તમારા વૃક્ષનું એક અલગ બર્થડે ટ્રી એકાઉન્ટ બનાવીશું.
+                    </p>
+
+                    <p data-translate="mr" style="display: none;" class="text-[#12141D]">मासिक व्हिडिओ अपलोड करण्यासाठी आम्ही तुमच्या झाडाचे स्वतंत्र वाढदिवस ट्री खाते तयार करू.
+                    </p>
+
+                    <p data-translate="kn" style="display: none;" class="text-[#12141D]">ಮಾಸಿಕ ವೀಡಿಯೊವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಲು ನಿಮ್ಮ ಮರದ ಪ್ರತ್ಯೇಕ ಜನ್ಮದಿನ ಟ್ರೀ ಖಾತೆಯನ್ನು ನಾವು ರಚಿಸುತ್ತೇವೆ.
+                    </p>
+
+                    <p data-translate="ml" style="display: none;" class="text-[#12141D]">പ്രതിമാസ വീഡിയോ അപ്‌ലോഡ് ചെയ്യുന്നതിന് ഞങ്ങൾ നിങ്ങളുടെ ട്രീയുടെ ഒരു പ്രത്യേക ജന്മദിന ട്രീ അക്കൗണ്ട് സൃഷ്ടിക്കും.
+                    </p>
+
+                    <p data-translate="ta" style="display: none;" class="text-[#12141D]">மாதாந்திர வீடியோவைப் பதிவேற்ற உங்கள் மரத்தின் தனி பிறந்தநாள் மரக் கணக்கை உருவாக்குவோம்.
+                    </p>
+
+                    <p data-translate="te" style="display: none;" class="text-[#12141D]">నెలవారీ వీడియోను అప్‌లోడ్ చేయడానికి మేము మీ చెట్టు యొక్క ప్రత్యేక పుట్టినరోజు చెట్టు ఖాతాను సృష్టిస్తాము.
+                    </p>
+
+                    <p data-translate="or" style="display: none;" class="text-[#12141D]">ମାସିକ ଭିଡିଓ ଅପଲୋଡ୍ କରିବାକୁ ଆମେ ଆପଣଙ୍କ ଗଛର ଏକ ପୃଥକ ଜନ୍ମଦିନ ଗଛ ଖାତା ସୃଷ୍ଟି କରିବୁ |
+                    </p>
+
+                    <p data-translate="be" style="display: none;" class="text-[#12141D]">মাসিক ভিডিও আপলোড করার জন্য আমরা আপনার গাছের একটি পৃথক জন্মদিন ট্রি অ্যাকাউন্ট তৈরি করব।
+                    </p>
+
+                    <p data-translate="as" style="display: none;" class="text-[#12141D]">আমি আপোনাৰ গছৰ এটা সুকীয়া Birthday Tree Account তৈয়াৰ কৰি মাহেকীয়া ভিডিঅ' আপলোড কৰিম।
+                    </p>
+
+                    <p data-translate="sd" style="display: none;" class="text-[#12141D]">مھينا وڊيو اپلوڊ ڪرڻ لاءِ اسان توھان جي وڻ جو ھڪڙو الڳ سالگرھ وڻ جو اڪائونٽ ٺاھينداسين.
+                    </p>
+
                 </div>
 
             </div>
@@ -533,12 +1042,15 @@
 
                 <div data-aos="fade-up" class="w-full md:w-4/5 bg-white text-black p-8 border rounded-3xl">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Video updates
+                        <span class="text-xl lg:text-2xl font-semibold text-[#529801]">Video updates
+                            up to 03
+                            years</span>
+                        <!-- <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Video updates
                             up to 03
                             years</span>
                         <span data-translate="hi" style="display: none;"
                             class="text-xl lg:text-2xl font-semibold text-[#529801]">
-                            वीडियो अपडेट 3 वर्ष तक</span>
+                            वीडियो अपडेट 3 वर्ष तक</span> -->
                     </h1>
                     <p data-translate="en" class="text-[#12141D]">To confirm whether the sapling you planted has grown
                         into a big tree or not, a video of your tree will be uploaded every month for 3 years and you
@@ -548,14 +1060,49 @@
                         गया है या नहीं इस बात की पुष्टि के लिए आपके पेड़ की एक वीडियो हर महीने 3 साल तक अपलोड की जायेगी व
                         अपलोड होने की सूचना आपको दी जाएगी ताकि आप संतुष्ट हो सके |
                     </p>
+                    <p data-translate="pa" style="display: none;" class="text-[#12141D]">ਇਸ ਗੱਲ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਕਿ ਤੁਹਾਡੇ ਦੁਆਰਾ ਲਗਾਏ ਗਏ ਬੂਟੇ ਤੋਂ ਵੱਡਾ ਦਰੱਖਤ ਬਣ ਗਿਆ ਹੈ ਜਾਂ ਨਹੀਂ, ਤੁਹਾਡੇ ਰੁੱਖ ਦੀ ਇੱਕ ਵੀਡੀਓ 3 ਸਾਲਾਂ ਲਈ ਹਰ ਮਹੀਨੇ ਅਪਲੋਡ ਕੀਤੀ ਜਾਵੇਗੀ ਅਤੇ ਤੁਹਾਨੂੰ ਅਪਲੋਡ ਕਰਨ ਬਾਰੇ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ ਤਾਂ ਜੋ ਤੁਸੀਂ ਸੰਤੁਸ਼ਟ ਹੋ ਸਕੋ।
+                    </p>
+
+                    <p data-translate="gu" style="display: none;" class="text-[#12141D]">તમે વાવેલો છોડ મોટો થઈ ગયો છે કે નહીં તેની પુષ્ટિ કરવા માટે, તમારા વૃક્ષનો એક વિડિયો દર મહિને 3 વર્ષ સુધી અપલોડ કરવામાં આવશે અને તમને અપલોડ કરવા વિશે જાણ કરવામાં આવશે જેથી કરીને તમે સંતુષ્ટ થઈ શકો.
+                    </p>
+
+                    <p data-translate="mr" style="display: none;" class="text-[#12141D]">तुम्ही लावलेल्या रोपट्याचे मोठे झाड झाले आहे की नाही याची खात्री करण्यासाठी तुमच्या झाडाचा व्हिडीओ 3 वर्षांपर्यंत दर महिन्याला अपलोड केला जाईल आणि तुम्हाला त्या अपलोडची माहिती दिली जाईल जेणेकरून तुमचे समाधान होईल.
+                    </p>
+
+                    <p data-translate="kn" style="display: none;" class="text-[#12141D]">ನೀವು ನೆಟ್ಟ ಸಸಿ ದೊಡ್ಡ ಮರವಾಗಿ ಬೆಳೆದಿದೆಯೇ ಅಥವಾ ಇಲ್ಲವೇ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಲು, ನಿಮ್ಮ ಮರದ ವೀಡಿಯೊವನ್ನು 3 ವರ್ಷಗಳವರೆಗೆ ಪ್ರತಿ ತಿಂಗಳು ಅಪ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತದೆ ಮತ್ತು ಅಪ್‌ಲೋಡ್ ಮಾಡುವ ಬಗ್ಗೆ ನಿಮಗೆ ತಿಳಿಸಲಾಗುವುದು ಇದರಿಂದ ನೀವು ತೃಪ್ತಿ ಹೊಂದಬಹುದು.
+                    </p>
+
+                    <p data-translate="ml" style="display: none;" class="text-[#12141D]">നിങ്ങൾ നട്ട തൈ വളർന്ന് വലിയ മരമായോ ഇല്ലയോ എന്ന് സ്ഥിരീകരിക്കുന്നതിന്, നിങ്ങളുടെ മരത്തിൻ്റെ വീഡിയോ 3 വർഷത്തേക്ക് എല്ലാ മാസവും അപ്‌ലോഡ് ചെയ്യുകയും അപ്‌ലോഡ് ചെയ്യുന്നതിനെക്കുറിച്ച് നിങ്ങളെ അറിയിക്കുകയും ചെയ്യും, അതുവഴി നിങ്ങൾക്ക് തൃപ്തിയടയാനാകും.
+                    </p>
+
+                    <p data-translate="ta" style="display: none;" class="text-[#12141D]">நீங்கள் நட்ட மரக்கன்று பெரிய மரமாக வளர்ந்ததா இல்லையா என்பதை உறுதிப்படுத்த, உங்கள் மரத்தின் வீடியோ 3 ஆண்டுகளுக்கு ஒவ்வொரு மாதமும் பதிவேற்றப்படும், மேலும் நீங்கள் திருப்தி அடையும் வகையில் பதிவேற்றம் குறித்து உங்களுக்குத் தெரிவிக்கப்படும்.
+                    </p>
+
+                    <p data-translate="te" style="display: none;" class="text-[#12141D]">మీరు నాటిన మొక్క పెద్ద చెట్టుగా పెరిగిందా లేదా అని నిర్ధారించుకోవడానికి, మీ చెట్టు యొక్క వీడియో ప్రతి నెలా 3 సంవత్సరాల పాటు అప్‌లోడ్ చేయబడుతుంది మరియు మీరు సంతృప్తి చెందడానికి అప్‌లోడ్ గురించి మీకు తెలియజేయబడుతుంది.
+                    </p>
+
+                    <p data-translate="or" style="display: none;" class="text-[#12141D]">ଆପଣ ଲଗାଇଥିବା ଚାରା ଏକ ବଡ ଗଛରେ ବ grown ିଛି କି ନାହିଁ ତାହା ନିଶ୍ଚିତ କରିବାକୁ, ଆପଣଙ୍କ ଗଛର ଏକ ଭିଡିଓ ପ୍ରତି ବର୍ଷ 3 ବର୍ଷ ପାଇଁ ଅପଲୋଡ୍ ହେବ ଏବଂ ଆପଣଙ୍କୁ ଅପଲୋଡ୍ ବିଷୟରେ ସୂଚନା ଦିଆଯିବ ଯାହା ଦ୍ you ାରା ଆପଣ ସନ୍ତୁଷ୍ଟ ହୋଇପାରିବେ |
+                    </p>
+
+                    <p data-translate="be" style="display: none;" class="text-[#12141D]">আপনার লাগানো চারাটি বড় গাছে পরিণত হয়েছে কি না তা নিশ্চিত করার জন্য, আপনার গাছের একটি ভিডিও 3 বছর ধরে প্রতি মাসে আপলোড করা হবে এবং আপলোড করার বিষয়ে আপনাকে জানানো হবে যাতে আপনি সন্তুষ্ট হতে পারেন।
+                    </p>
+
+                    <p data-translate="as" style="display: none;" class="text-[#12141D]">আপুনি ৰোপণ কৰা গছজোপা ডাঙৰ গছ হৈছে নে নাই নিশ্চিত কৰিবলৈ আপোনাৰ গছৰ এটা ভিডিঅ' প্ৰতিমাহে ৩ বছৰৰ বাবে আপলোড কৰা হ'ব আৰু আপলোড কৰাৰ বিষয়ে আপোনাক অৱগত কৰা হ'ব যাতে আপুনি সন্তুষ্ট হ'ব পাৰে।
+                    </p>
+
+                    <p data-translate="sd" style="display: none;" class="text-[#12141D]">ان ڳالهه جي تصديق ڪرڻ لاءِ ته توهان جيڪو ٻوٽو لڳايو آهي اهو وڏو وڻ بڻجي ويو آهي يا نه، توهان جي وڻ جي هڪ وڊيو 3 سالن تائين هر مهيني اپلوڊ ڪئي ويندي ۽ توهان کي اپلوڊ ڪرڻ جي خبر ڏني ويندي ته جيئن توهان مطمئن ٿي سگهو.
+                    </p>
+
                 </div>
 
                 <div data-aos="fade-up" class="w-full md:w-4/5 bg-white text-black p-8 border rounded-3xl">
                     <h1 class="flex flex-col justify-center items-start">
-                        <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Replacement
+                        <span class="text-xl lg:text-2xl font-semibold text-[#529801]">Replacement
+                            Guarantee</span>
+                        <!-- <span data-translate="en" class="text-xl lg:text-2xl font-semibold text-[#529801]">Replacement
                             Guarantee</span>
                         <span data-translate="hi" style="display: none;"
-                            class="text-xl lg:text-2xl font-semibold text-[#529801]">प्रतिस्थापन गारंटी</span>
+                            class="text-xl lg:text-2xl font-semibold text-[#529801]">प्रतिस्थापन गारंटी</span> -->
                     </h1>
                     <p data-translate="en" class="text-[#12141D]">If your birthday tree doesn't survive, we will plant a
                         new tree and take care of it for the next 3 years and upload video to your Birthday Tree
@@ -565,6 +1112,40 @@
                         Survive नहीं कर पाता है, तो हम एक नया पेड़ लगाएंगे और अगले 3 वर्षों तक उसकी देखभाल करेंगे और
                         आपके Birthday Tree Account पर वीडियो अपलोड करेंगे।
                     </p>
+
+                    <p data-translate="pa" style="display: none;" class="text-[#12141D]">ਜੇਕਰ ਤੁਹਾਡਾ ਜਨਮ ਦਿਨ ਦਾ ਰੁੱਖ ਨਹੀਂ ਬਚਦਾ ਹੈ, ਤਾਂ ਅਸੀਂ ਇੱਕ ਨਵਾਂ ਰੁੱਖ ਲਗਾਵਾਂਗੇ ਅਤੇ ਅਗਲੇ 3 ਸਾਲਾਂ ਤੱਕ ਇਸਦੀ ਦੇਖਭਾਲ ਕਰਾਂਗੇ ਅਤੇ ਤੁਹਾਡੇ ਜਨਮਦਿਨ ਦੇ ਰੁੱਖ ਦੇ ਖਾਤੇ ਵਿੱਚ ਵੀਡੀਓ ਅੱਪਲੋਡ ਕਰਾਂਗੇ।
+                    </p>
+
+                    <p data-translate="gu" style="display: none;" class="text-[#12141D]">જો તમારું બર્થડે ટ્રી બચતું નથી, તો અમે એક નવું વૃક્ષ વાવીશું અને આગામી 3 વર્ષ સુધી તેની સંભાળ રાખીશું અને તમારા બર્થડે ટ્રી એકાઉન્ટમાં વિડિયો અપલોડ કરીશું.
+                    </p>
+
+                    <p data-translate="mr" style="display: none;" class="text-[#12141D]">जर तुमच्या वाढदिवसाचे झाड जगले नाही तर आम्ही नवीन झाड लावू आणि पुढील 3 वर्ष त्याची काळजी घेऊ आणि तुमच्या वाढदिवसाच्या झाडाच्या खात्यावर व्हिडिओ अपलोड करू.
+                    </p>
+
+                    <p data-translate="kn" style="display: none;" class="text-[#12141D]">ನಿಮ್ಮ ಹುಟ್ಟುಹಬ್ಬದ ಮರವು ಉಳಿಯದಿದ್ದರೆ, ನಾವು ಹೊಸ ಮರವನ್ನು ನೆಡುತ್ತೇವೆ ಮತ್ತು ಮುಂದಿನ 3 ವರ್ಷಗಳವರೆಗೆ ಅದನ್ನು ನೋಡಿಕೊಳ್ಳುತ್ತೇವೆ ಮತ್ತು ನಿಮ್ಮ ಜನ್ಮದಿನ ಟ್ರೀ ಖಾತೆಗೆ ವೀಡಿಯೊವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡುತ್ತೇವೆ.
+                    </p>
+
+                    <p data-translate="ml" style="display: none;" class="text-[#12141D]">നിങ്ങളുടെ ജന്മദിന ട്രീ നിലനിൽക്കുന്നില്ലെങ്കിൽ, ഞങ്ങൾ ഒരു പുതിയ മരം നട്ടുപിടിപ്പിക്കുകയും അടുത്ത 3 വർഷത്തേക്ക് അത് പരിപാലിക്കുകയും നിങ്ങളുടെ ബർത്ത്‌ഡേ ട്രീ അക്കൗണ്ടിലേക്ക് വീഡിയോ അപ്‌ലോഡ് ചെയ്യുകയും ചെയ്യും.
+                    </p>
+
+                    <p data-translate="ta" style="display: none;" class="text-[#12141D]">உங்கள் பிறந்தநாள் மரம் வாழவில்லை என்றால், நாங்கள் ஒரு புதிய மரத்தை நட்டு, அடுத்த 3 ஆண்டுகளுக்கு அதைப் பராமரிப்போம், மேலும் உங்கள் பிறந்தநாள் மரக் கணக்கில் வீடியோவைப் பதிவேற்றுவோம்.
+                    </p>
+
+                    <p data-translate="te" style="display: none;" class="text-[#12141D]">మీ పుట్టినరోజు చెట్టు మనుగడలో లేకుంటే, మేము కొత్త చెట్టును నాటుతాము మరియు రాబోయే 3 సంవత్సరాల పాటు దానిని సంరక్షిస్తాము మరియు మీ బర్త్‌డే ట్రీ ఖాతాకు వీడియోను అప్‌లోడ్ చేస్తాము.
+                    </p>
+
+                    <p data-translate="or" style="display: none;" class="text-[#12141D]">ଯଦି ତୁମର ଜନ୍ମଦିନ ବୃକ୍ଷ ବଞ୍ଚିବ ନାହିଁ, ଆମେ ଏକ ନୂତନ ଗଛ ଲଗାଇବୁ ଏବଂ ପରବର୍ତ୍ତୀ 3 ବର୍ଷ ପାଇଁ ଏହାର ଯତ୍ନ ନେବୁ ଏବଂ ତୁମର ଜନ୍ମଦିନ ଗଛ ଆକାଉଣ୍ଟରେ ଭିଡିଓ ଅପଲୋଡ୍ କରିବୁ |
+                    </p>
+
+                    <p data-translate="be" style="display: none;" class="text-[#12141D]">যদি আপনার জন্মদিনের গাছটি বেঁচে না থাকে, তাহলে আমরা একটি নতুন গাছ লাগাব এবং পরবর্তী 3 বছরের জন্য এটির যত্ন নেব এবং আপনার জন্মদিনের গাছ অ্যাকাউন্টে ভিডিও আপলোড করব।
+                    </p>
+
+                    <p data-translate="as" style="display: none;" class="text-[#12141D]">যদি আপোনাৰ জন্মদিনৰ গছজোপা বাচি নাথাকে তেন্তে আমি এটা নতুন গছ ৰোপণ কৰি আগন্তুক ৩ বছৰ তাৰ যত্ন লম আৰু আপোনাৰ জন্মদিনৰ গছ একাউণ্টত ভিডিঅ' আপলোড কৰিম।
+                    </p>
+
+                    <p data-translate="sd" style="display: none;" class="text-[#12141D]">جيڪڏهن توهان جو سالگرهه جو وڻ نه بچندو ته اسان هڪ نئون وڻ پوکينداسين ۽ ايندڙ 3 سالن تائين ان جي سنڀال ڪنداسين ۽ توهان جي سالگره جي وڻ جي اڪائونٽ تي وڊيو اپلوڊ ڪنداسين.
+                    </p>
+
                 </div>
 
             </div>
@@ -942,6 +1523,40 @@
                             चिंता करने की ज़रूरत नहीं है। Easy verification हो सके इसलिए हमारी सभी Birthday Tree ID को
                             Serial Wise बनाया गया है |
                         </p>
+
+                        <p data-translate="pa" style="display: none;" class="text-sm text-[#12141D]">ਬਹੁਤ ਸਾਰੇ ਗਾਹਕਾਂ ਨੇ ਮੈਨੂੰ ਪੁੱਛਿਆ ਕਿ ਕੀ ਮੈਂ ਇੱਕੋ ਰੁੱਖ ਦੀ ਵੀਡੀਓ ਵੱਖ-ਵੱਖ ਗਾਹਕਾਂ ਨੂੰ ਭੇਜ ਰਿਹਾ ਹਾਂ। ਤੁਹਾਨੂੰ ਇਸ ਬਾਰੇ ਚਿੰਤਾ ਕਰਨ ਦੀ ਕੋਈ ਲੋੜ ਨਹੀਂ ਹੈ। ਸਾਡੇ ਸਾਰੇ ਜਨਮਦਿਨ ਟ੍ਰੀ ਆਈਡੀ ਨੂੰ ਲੜੀਵਾਰ ਬਣਾਇਆ ਗਿਆ ਹੈ ਤਾਂ ਜੋ ਆਸਾਨੀ ਨਾਲ ਤਸਦੀਕ ਕੀਤਾ ਜਾ ਸਕੇ।
+                    </p>
+
+                    <p data-translate="gu" style="display: none;" class="text-sm text-[#12141D]">ઘણા ગ્રાહકોએ મને પૂછ્યું કે શું હું એક જ વૃક્ષનો વિડિયો જુદા જુદા ગ્રાહકોને મોકલી રહ્યો છું. તમારે આ અંગે ચિંતા કરવાની જરૂર નથી. અમારા તમામ બર્થડે ટ્રી આઈડી સીરીયલ મુજબ બનાવવામાં આવ્યા છે જેથી કરીને સરળ ચકાસણી થઈ શકે.
+                    </p>
+
+                    <p data-translate="mr" style="display: none;" class="text-sm text-[#12141D]">बऱ्याच क्लायंटनी मला विचारले की मी एकाच झाडाचा व्हिडिओ वेगवेगळ्या क्लायंटना पाठवत आहे का. तुम्हाला याची काळजी करण्याची गरज नाही. आमचे सर्व बर्थडे ट्री आयडी क्रमानुसार केले गेले आहेत जेणेकरून सहज पडताळणी करता येईल.
+                    </p>
+
+                    <p data-translate="kn" style="display: none;" class="text-sm text-[#12141D]">ನಾನು ಒಂದೇ ಮರದ ವೀಡಿಯೊವನ್ನು ಬೇರೆ ಬೇರೆ ಕ್ಲೈಂಟ್‌ಗಳಿಗೆ ಕಳುಹಿಸುತ್ತಿದ್ದೇನೆಯೇ ಎಂದು ಅನೇಕ ಗ್ರಾಹಕರು ನನ್ನನ್ನು ಕೇಳಿದರು. ಈ ಬಗ್ಗೆ ನೀವು ಚಿಂತಿಸಬೇಕಾಗಿಲ್ಲ. ನಮ್ಮ ಎಲ್ಲಾ ಜನ್ಮದಿನದ ಟ್ರೀ ಐಡಿಗಳನ್ನು ಸರಣಿಯ ಪ್ರಕಾರವಾಗಿ ಮಾಡಲಾಗಿದೆ ಇದರಿಂದ ಸುಲಭವಾದ ಪರಿಶೀಲನೆಯನ್ನು ಮಾಡಬಹುದು.
+                    </p>
+
+                    <p data-translate="ml" style="display: none;" class="text-sm text-[#12141D]">ഒരേ മരത്തിൻ്റെ വീഡിയോ വ്യത്യസ്ത ക്ലയൻ്റുകൾക്ക് അയയ്ക്കുകയാണോ എന്ന് പല ക്ലയൻ്റുകളും എന്നോട് ചോദിച്ചു. നിങ്ങൾ ഇതിനെക്കുറിച്ച് വിഷമിക്കേണ്ടതില്ല. ഞങ്ങളുടെ എല്ലാ ബർത്ത്‌ഡേ ട്രീ ഐഡികളും സീരിയൽ തിരിച്ചുള്ളതിനാൽ എളുപ്പത്തിൽ പരിശോധിച്ചുറപ്പിക്കാൻ കഴിയും.
+                    </p>
+
+                    <p data-translate="ta" style="display: none;" class="text-sm text-[#12141D]">ஒரே மரத்தின் வீடியோவை வெவ்வேறு வாடிக்கையாளர்களுக்கு அனுப்புகிறேனா என்று பல வாடிக்கையாளர்கள் என்னிடம் கேட்டார்கள். இதைப் பற்றி நீங்கள் கவலைப்பட வேண்டியதில்லை. எங்கள் பிறந்தநாள் மர ஐடிகள் அனைத்தும் வரிசை வாரியாக உருவாக்கப்பட்டுள்ளன, இதனால் எளிதாக சரிபார்ப்பு செய்ய முடியும்.
+                    </p>
+
+                    <p data-translate="te" style="display: none;" class="text-sm text-[#12141D]">చాలా మంది క్లయింట్లు నేను ఒకే చెట్టు యొక్క వీడియోను వేర్వేరు క్లయింట్‌లకు పంపుతున్నానా అని నన్ను అడిగారు. దీని గురించి మీరు ఆందోళన చెందాల్సిన అవసరం లేదు. మా బర్త్‌డే ట్రీ ఐడిలన్నీ సీరియల్ వారీగా తయారు చేయబడ్డాయి, తద్వారా సులభంగా వెరిఫికేషన్ చేయవచ్చు.
+                    </p>
+
+                    <p data-translate="or" style="display: none;" class="text-sm text-[#12141D]">ଅନେକ ଗ୍ରାହକ ମୋତେ ପଚାରିଥିଲେ ଯେ ମୁଁ ସମାନ ଗଛର ଭିଡିଓ ବିଭିନ୍ନ ଗ୍ରାହକଙ୍କୁ ପଠାଉଛି କି? ଆପଣଙ୍କୁ ଏ ବିଷୟରେ ଚିନ୍ତା କରିବାକୁ ପଡିବ ନାହିଁ | ଆମର ସମସ୍ତ ଜନ୍ମଦିନ ବୃକ୍ଷ ID ଗୁଡିକ କ୍ରମିକ ଜ୍ଞାନୀ ହୋଇଛି ଯାହା ଦ୍ easy ାରା ସହଜ ଯାଞ୍ଚ ହୋଇପାରିବ |
+                    </p>
+
+                    <p data-translate="be" style="display: none;" class="text-sm text-[#12141D]">অনেক ক্লায়েন্ট আমাকে জিজ্ঞাসা করেছিল যে আমি একই গাছের ভিডিও বিভিন্ন ক্লায়েন্টকে পাঠাচ্ছি কিনা। আপনাকে এই নিয়ে চিন্তা করতে হবে না। আমাদের সমস্ত জন্মদিনের গাছের আইডি সিরিয়াল অনুসারে তৈরি করা হয়েছে যাতে সহজে যাচাই করা যায়।
+                    </p>
+
+                    <p data-translate="as" style="display: none;" class="text-sm text-[#12141D]">বহু ক্লায়েণ্টে মোক সুধিছিল যে মই একেটা গছৰ ভিডিঅ’টো বিভিন্ন ক্লায়েণ্টলৈ পঠিয়াইছো নেকি? এই বিষয়ে চিন্তা কৰিব নালাগে। আমাৰ সকলো বাৰ্থডে ট্ৰি আইডি ছিৰিয়েল ৱাইজ কৰা হৈছে যাতে সহজে ভেৰিফিকেচন কৰিব পৰা যায়।
+                    </p>
+
+                    <p data-translate="sd" style="display: none;" class="text-sm text-[#12141D]">ڪيترائي گراهڪ مون کان پڇيو ته ڇا مان هڪ ئي وڻ جي وڊيو مختلف گراهڪن ڏانهن موڪلي رهيو آهيان. توهان کي ان بابت پريشان ٿيڻ جي ضرورت ناهي. اسان جي سڀني جنم ڏينهن جي وڻ جي سڃاڻپ سيريل وار ڪئي وئي آهي ته جيئن آساني سان تصديق ڪري سگهجي.
+                    </p>
+
                     </div>
 
                     <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black p-8">
@@ -955,6 +1570,39 @@
                             Accounts को सभी के लिए Open रखा गया है ताकि आप सभी Birthday Tree Account की Videos को Check
                             कर सके |
                         </p>
+                        <p data-translate="pa" style="display: none;" class="text-sm text-[#12141D]">ਸਾਰੇ ਜਨਮਦਿਨ ਟ੍ਰੀ ਖਾਤੇ ਸਾਰਿਆਂ ਲਈ ਖੁੱਲ੍ਹੇ ਰੱਖੇ ਗਏ ਹਨ ਤਾਂ ਜੋ ਤੁਸੀਂ ਸਾਰੇ ਜਨਮਦਿਨ ਟ੍ਰੀ ਖਾਤਿਆਂ ਦੇ ਵੀਡੀਓਜ਼ ਦੀ ਜਾਂਚ ਕਰ ਸਕੋ।
+                        </p>
+    
+                        <p data-translate="gu" style="display: none;" class="text-sm text-[#12141D]">બધા બર્થડે ટ્રી એકાઉન્ટ દરેક માટે ખુલ્લા રાખવામાં આવ્યા છે જેથી કરીને તમે બધા બર્થડે ટ્રી એકાઉન્ટના વીડિયો ચેક કરી શકો.
+                        </p>
+    
+                        <p data-translate="mr" style="display: none;" class="text-sm text-[#12141D]">सर्व बर्थडे ट्री खाती प्रत्येकासाठी खुली ठेवली आहेत जेणेकरून तुम्ही सर्व बर्थडे ट्री अकाउंट्सचे व्हिडिओ तपासू शकता.
+                        </p>
+    
+                        <p data-translate="kn" style="display: none;" class="text-sm text-[#12141D]">ಎಲ್ಲಾ ಜನ್ಮದಿನ ಟ್ರೀ ಖಾತೆಗಳನ್ನು ಎಲ್ಲರಿಗೂ ಮುಕ್ತವಾಗಿ ಇರಿಸಲಾಗುತ್ತದೆ ಇದರಿಂದ ನೀವು ಎಲ್ಲಾ ಜನ್ಮದಿನ ಟ್ರೀ ಖಾತೆಗಳ ವೀಡಿಯೊಗಳನ್ನು ಪರಿಶೀಲಿಸಬಹುದು.
+                        </p>
+    
+                        <p data-translate="ml" style="display: none;" class="text-sm text-[#12141D]">എല്ലാ ബർത്ത്‌ഡേ ട്രീ അക്കൗണ്ടുകളും എല്ലാവർക്കുമായി തുറന്നിരിക്കുന്നതിനാൽ നിങ്ങൾക്ക് എല്ലാ ജന്മദിന ട്രീ അക്കൗണ്ടുകളുടെയും വീഡിയോകൾ പരിശോധിക്കാനാകും.
+                        </p>
+    
+                        <p data-translate="ta" style="display: none;" class="text-sm text-[#12141D]">அனைத்து பிறந்தநாள் மரக் கணக்குகளும் அனைவருக்கும் திறந்திருக்கும், இதன் மூலம் நீங்கள் அனைத்து பிறந்தநாள் மரக் கணக்குகளின் வீடியோக்களையும் பார்க்கலாம்.
+                        </p>
+    
+                        <p data-translate="te" style="display: none;" class="text-sm text-[#12141D]">అన్ని బర్త్‌డే ట్రీ ఖాతాలు అందరికీ తెరిచి ఉంచబడతాయి, తద్వారా మీరు అన్ని పుట్టినరోజు చెట్టు ఖాతాల వీడియోలను తనిఖీ చేయవచ్చు.
+                        </p>
+    
+                        <p data-translate="or" style="display: none;" class="text-sm text-[#12141D]">ସମସ୍ତ ଜନ୍ମଦିନ ବୃକ୍ଷ ଖାତା ସମସ୍ତଙ୍କ ପାଇଁ ଖୋଲା ରଖାଯାଏ ଯାହାଦ୍ୱାରା ଆପଣ ସମସ୍ତ ଜନ୍ମଦିନ ବୃକ୍ଷ ଖାତାର ଭିଡିଓ ଯା check ୍ଚ କରିପାରିବେ |
+                        </p>
+    
+                        <p data-translate="be" style="display: none;" class="text-sm text-[#12141D]">সমস্ত জন্মদিনের গাছের অ্যাকাউন্ট সকলের জন্য খোলা রাখা হয়েছে যাতে আপনি সমস্ত জন্মদিনের ট্রি অ্যাকাউন্টের ভিডিওগুলি পরীক্ষা করতে পারেন।
+                        </p>
+    
+                        <p data-translate="as" style="display: none;" class="text-sm text-[#12141D]">সকলো Birthday Tree Account সকলোৰে বাবে খোলা ৰখা হৈছে যাতে আপুনি সকলো Birthday Tree Account ৰ ভিডিঅ' চাব পাৰে।
+                        </p>
+    
+                        <p data-translate="sd" style="display: none;" class="text-sm text-[#12141D]">سڀ سالگرهه جي وڻن جا اڪائونٽس هر ڪنهن لاءِ کليل رکيا ويا آهن ته جيئن توهان سڀني سالگره جي وڻن جي اڪائونٽن جي وڊيوز چيڪ ڪري سگهو.
+                        </p>
+    
                     </div>
 
                     <div data-aos="fade-up" class="w-11/12 md:w-1/3 bg-white text-black p-8">
@@ -965,10 +1613,43 @@
                             take these concerns seriously
                             to ensure each tree is linked to just one account.
                         </p>
-                        <p data-translate="hi" style="display: none;" class="text-sm text-[#12141D]">डुप्लीकेट वीडियो
+                        <p data-translate="hi" style="display: none;" class="text-sm text-sm text-[#12141D]">डुप्लीकेट वीडियो
                             मिला? इसकी रिपोर्ट करें! हम इन चिंताओं को गंभीरता से लेते हैं
                             यह सुनिश्चित करने के लिए कि प्रत्येक पेड़ केवल एक खाते से जुड़ा हुआ है।
                         </p>
+                        <p data-translate="pa" style="display: none;" class="text-sm text-[#12141D]">ਇੱਕ ਡੁਪਲੀਕੇਟ ਵੀਡੀਓ ਮਿਲਿਆ? ਇਸਦੀ ਰਿਪੋਰਟ ਕਰੋ! ਅਸੀਂ ਇਹ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ ਇਹਨਾਂ ਚਿੰਤਾਵਾਂ ਨੂੰ ਗੰਭੀਰਤਾ ਨਾਲ ਲੈਂਦੇ ਹਾਂ ਕਿ ਹਰੇਕ ਰੁੱਖ ਸਿਰਫ਼ ਇੱਕ ਖਾਤੇ ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ ਹੈ।
+                        </p>
+    
+                        <p data-translate="gu" style="display: none;" class="text-sm text-[#12141D]">ડુપ્લિકેટ વિડિયો મળ્યો? તેની જાણ કરો! દરેક વૃક્ષ માત્ર એક ખાતા સાથે જોડાયેલું છે તેની ખાતરી કરવા માટે અમે આ ચિંતાઓને ગંભીરતાથી લઈએ છીએ.
+                        </p>
+    
+                        <p data-translate="mr" style="display: none;" class="text-sm text-[#12141D]">डुप्लिकेट व्हिडिओ सापडला? त्याची तक्रार करा! प्रत्येक झाड फक्त एका खात्याशी जोडलेले आहे याची खात्री करण्यासाठी आम्ही या समस्या गांभीर्याने घेतो.
+                        </p>
+    
+                        <p data-translate="kn" style="display: none;" class="text-sm text-[#12141D]">ನಕಲಿ ವೀಡಿಯೊ ಕಂಡುಬಂದಿದೆಯೇ? ಅದನ್ನು ವರದಿ ಮಾಡಿ! ಪ್ರತಿಯೊಂದು ಮರವನ್ನು ಕೇವಲ ಒಂದು ಖಾತೆಗೆ ಲಿಂಕ್ ಮಾಡಲಾಗಿದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ನಾವು ಈ ಕಾಳಜಿಗಳನ್ನು ಗಂಭೀರವಾಗಿ ಪರಿಗಣಿಸುತ್ತೇವೆ.
+                        </p>
+    
+                        <p data-translate="ml" style="display: none;" class="text-sm text-[#12141D]">ഡ്യൂപ്ലിക്കേറ്റ് വീഡിയോ കണ്ടെത്തിയോ? അത് റിപ്പോർട്ട് ചെയ്യുക! ഓരോ മരവും ഒരു അക്കൗണ്ടിലേക്ക് മാത്രം ലിങ്ക് ചെയ്തിട്ടുണ്ടെന്ന് ഉറപ്പാക്കാൻ ഈ ആശങ്കകൾ ഞങ്ങൾ ഗൗരവമായി കാണുന്നു.
+                        </p>
+    
+                        <p data-translate="ta" style="display: none;" class="text-sm text-[#12141D]">நகல் வீடியோ கிடைத்ததா? புகாரளிக்கவும்! ஒவ்வொரு மரமும் ஒரே ஒரு கணக்குடன் இணைக்கப்பட்டுள்ளதை உறுதிசெய்ய, இந்தக் கவலைகளை நாங்கள் தீவிரமாக எடுத்துக்கொள்கிறோம்.
+                        </p>
+    
+                        <p data-translate="te" style="display: none;" class="text-sm text-[#12141D]">డూప్లికేట్ వీడియో దొరికిందా? రిపోర్ట్ చేయండి! ప్రతి చెట్టు కేవలం ఒక ఖాతాకు లింక్ చేయబడిందని నిర్ధారించుకోవడానికి మేము ఈ ఆందోళనలను తీవ్రంగా పరిగణిస్తాము.
+                        </p>
+    
+                        <p data-translate="or" style="display: none;" class="text-sm text-[#12141D]">ଏକ ନକଲ ଭିଡିଓ ପାଇଲେ କି? ଏହାକୁ ରିପୋର୍ଟ କରନ୍ତୁ! ପ୍ରତ୍ୟେକ ଗଛ କେବଳ ଗୋଟିଏ ଖାତା ସହିତ ଲିଙ୍କ୍ ହୋଇଛି କି ନାହିଁ ନିଶ୍ଚିତ କରିବାକୁ ଆମେ ଏହି ଚିନ୍ତାଧାରାକୁ ଗମ୍ଭୀରତାର ସହ ନେଇଥାଉ |
+                        </p>
+    
+                        <p data-translate="be" style="display: none;" class="text-sm text-[#12141D]">একটি ডুপ্লিকেট ভিডিও পাওয়া গেছে? এটা রিপোর্ট কর! প্রতিটি গাছ শুধুমাত্র একটি অ্যাকাউন্টের সাথে লিঙ্ক করা হয়েছে তা নিশ্চিত করতে আমরা এই উদ্বেগগুলিকে গুরুত্ব সহকারে নিই।
+                        </p>
+    
+                        <p data-translate="as" style="display: none;" class="text-sm text-[#12141D]">এটা ডুপ্লিকেট ভিডিঅ' পাইছেনে? ৰিপৰ্ট কৰক! আমি এই উদ্বেগসমূহক গুৰুত্বসহকাৰে লওঁ যাতে প্ৰতিটো গছ মাত্ৰ এটা একাউণ্টৰ সৈতে সংযুক্ত হৈ থাকে।
+                        </p>
+    
+                        <p data-translate="sd" style="display: none;" class="text-sm text-[#12141D]">هڪ نقل وڊيو مليو؟ رپورٽ ڪريو! اسان انهن خدشات کي سنجيدگي سان وٺون ٿا ته هر وڻ کي صرف هڪ اڪائونٽ سان ڳنڍيل آهي.
+                        </p>
+    
                     </div>
                 </div>
             </div>
