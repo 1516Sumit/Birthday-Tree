@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'Tamil': 'ta',
         'Telugu': 'te',
         'Odia/Oriya': 'or',
-        'Bengali': 'bn',
+        'Bengali': 'be',
         'Assamese': 'as',
         'Sindhi': 'sd'
     };
